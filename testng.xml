@@ -2,7 +2,8 @@
 <suite name="MySuite">
     <test name="MyTest">
         <classes>
-            <class name="ledsak.SidebarTest"/>
+          <class name="ledsak.LoginTest"/>
+          <class name="ledsak.SidebarTest"/>      
         </classes>
     </test>
 </suite>
