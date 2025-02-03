@@ -21,12 +21,14 @@
 <!--  Replace with the version you are using  -->
 </properties>
 <dependencies>
+
 <!--  Selenium and related dependencies  -->
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-java</artifactId>
 <version>4.15.0</version>
 </dependency>
+
 <!--  TestNG  -->
 <dependency>
 <groupId>org.testng</groupId>
@@ -35,11 +37,11 @@
 <scope>test</scope>
 </dependency>
 
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>5.6.0</version> <!-- Use the latest version -->
-</dependency>
+  <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>5.6.0</version> <!-- Use the latest version -->
+    </dependency>
 
 <dependency>
 <groupId>junit</groupId>
@@ -48,6 +50,7 @@
 <!--  Replace with the latest version number  -->
 <scope>test</scope>
 </dependency>
+
 <dependency>
 <groupId>org.junit.jupiter</groupId>
 <artifactId>junit-jupiter</artifactId>
@@ -55,6 +58,7 @@
 <!--  Replace with the latest version number  -->
 <scope>test</scope>
 </dependency>
+
 <dependency>
 <groupId>org.seleniumhq.selenium</groupId>
 <artifactId>selenium-chrome-driver</artifactId>
@@ -64,6 +68,7 @@
 <!--  Additional dependencies such as logging and utility libraries  -->
 <!--  ...  -->
 </dependencies>
+
 <repositories>
 <repository>
 <id>central</id>
