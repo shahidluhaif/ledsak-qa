@@ -27,9 +27,8 @@ jobs:
 
     - name: Setup WebDriver Manager
       run: |
-        echo "WebDriver Manager Setup"
-        wget https://github.com/bonigarcia/webdrivermanager/releases/download/webdrivermanager-5.0.3/webdrivermanager-5.0.3.jar -P ~/.m2/repository/io/github/bonigarcia/webdrivermanager/5.0.3/
-        echo "MAVEN_OPTS=-Dwebdrivermanager.chrome.driver=~/.m2/repository/io/github/bonigarcia/webdrivermanager/5.0.3/webdrivermanager-5.0.3.jar" >> $GITHUB_ENV
+        wget https://github.com/bonigarcia/webdrivermanager/releases/download/webdrivermanager-5.6.0/webdrivermanager-5.6.0.jar -P ~/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.0/
+        echo "MAVEN_OPTS=-Dwebdrivermanager.chrome.driver=~/.m2/repository/io/github/bonigarcia/webdrivermanager/5.6.0/webdrivermanager-5.6.0.jar" >> $GITHUB_ENV
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml

@@ -14,6 +14,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class LoginTest {
@@ -30,8 +32,9 @@ public class LoginTest {
         options.addArguments("--disable-gpu");  // Recommended for headless mode
         options.addArguments("--no-sandbox");  // Bypass OS security model
     
-        // Initialize ChromeDriver with options
-        driver = new ChromeDriver(options);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+
         
         driver.get(url);  
         driver.manage().window().maximize();
