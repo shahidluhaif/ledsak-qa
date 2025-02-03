@@ -14,18 +14,14 @@ jobs:
   selenium-test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        java-version: [11, 17]  # You can specify multiple Java versions
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up JDK ${{ matrix.java-version }}
+      - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: ${{ matrix.java-version }}
+          java-version: '17'
           distribution: 'adoptopenjdk'
 
       - name: Install dependencies
