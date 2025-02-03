@@ -1,0 +1,16 @@
+# Maven
+target/
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+
+# IntelliJ IDEA
+*.idea
+*.iml
+out/
+
+# JUnit and TestNG test output
+test-output/
