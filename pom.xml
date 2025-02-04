@@ -53,6 +53,13 @@
 </repositories>
 <build>
 <plugins>
+
+<plugin>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdriver-manager</artifactId>
+    <version>5.7.0</version>  <!-- Change to latest version -->
+</plugin>
+
 <!--  Maven Compiler Plugin  -->
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
