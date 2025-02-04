@@ -27,13 +27,15 @@ public class LoginTest {
 
  @BeforeClass
     public void setup() {
+        
+        WebDriverManager.chromedriver().setup();
+
         ChromeOptions options= new ChromeOptions();
         options.addArguments("--headless");  // Run Chrome in headless mode
         options.addArguments("--disable-gpu");  // Recommended for headless mode
         options.addArguments("--no-sandbox");  // Bypass OS security model
     
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
 
         
         driver.get(url);  

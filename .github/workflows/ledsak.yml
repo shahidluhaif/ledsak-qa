@@ -25,7 +25,17 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
 
-    
+    - name: Setup WebDriver Manager
+      run: |
+        echo "Setting up WebDriver Manager"
+        # WebDriver Manager automatically downloads the correct version of ChromeDriver
+        mvn io.github.bonigarcia:webdriver-manager:5.6.0:download
+
+    - name: Set up Google Chrome
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y google-chrome-stable
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 

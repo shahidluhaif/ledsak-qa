@@ -147,13 +147,12 @@ public class SidebarTest extends LoginTest{
         System.out.println("Login History page open: Successfull");
     }
 
-     //Setting dropdown
+     //Settings dropdown
      @Test (priority=7)
      public void setting(){
         
         JavascriptExecutor js= (JavascriptExecutor)driver;
-        
-
+ 
         WebElement setting= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
         js.executeScript("arguments[0].scrollIntoView(true);", setting);
         setting.click();
