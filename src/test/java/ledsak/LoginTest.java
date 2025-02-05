@@ -14,10 +14,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-
-
 public class LoginTest {
 
     WebDriver driver;
@@ -27,8 +23,6 @@ public class LoginTest {
 
  @BeforeClass
     public void setup() {
-        
-        WebDriverManager.chromedriver().setup();
 
         ChromeOptions options= new ChromeOptions();
         options.addArguments("--headless");  // Run Chrome in headless mode
