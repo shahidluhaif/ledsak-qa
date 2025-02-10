@@ -32,3 +32,4 @@ jobs:
 
       - name: Run Tests with Maven
         run: mvn clean test
+    

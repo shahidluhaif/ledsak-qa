@@ -53,9 +53,7 @@ public class LoginTest {
        //Find Dashboard page for login confirm
        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
        Assert.assertTrue(dashboard.isDisplayed());
-       Assert.assertEquals(dashboard.getText(), "Dashboard", "The Dashboard is not open");
-       System.out.println("Login Succesful: ledsak");
-        
+       Assert.assertEquals(dashboard.getText(), "Dashboard", "The Dashboard is not open");        
     }
 
      @AfterClass
