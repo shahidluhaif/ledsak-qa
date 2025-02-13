@@ -1,5 +1,8 @@
 package ledsak;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +19,7 @@ import org.testng.annotations.Test;
  */
 public class DashboardTest extends LoginTest {
 
-    @Test
+    @Test(priority=1)
     public void dashboardCard() {
 
         // Navigate to Dashboard
@@ -32,7 +35,7 @@ public class DashboardTest extends LoginTest {
 
     }
 
-    @Test
+    @Test(priority=2)
     public void followUpCard(){
         // Follow-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -44,7 +47,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertEquals(followUps.getText(), "Follow Ups", "The page is not Interact: Follow Ups");
     }
 
-    @Test
+    @Test(priority=3)
     public void overdueTaskCard(){
         // Overdue Task-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -56,7 +59,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertEquals(overdue.getText(), "Overdue Tasks", "The page is not Interact: Overdue Tasks");
     }
 
-    @Test
+    @Test(priority=4)
     public void staffCard(){
         // Staffs-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -68,7 +71,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertTrue(staff.getText().contains("Staff"), "The page is not Interact: Staff");
     }
 
-    @Test
+    @Test(priority=5)
     public void branchesCard(){
         // Branches-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -80,7 +83,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertTrue(branch.getText().contains("Branch"), "The page is not Interact: Branch");
     }
 
-    @Test
+    @Test(priority=6)
     public void sourcesCard(){
         // Branches-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -92,7 +95,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertTrue(sources.getText().contains("Sources"), "The page is not Interact: Source");
     }
 
-    @Test
+    @Test(priority=7)
     public void stagesCard(){
         // Branches-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -105,7 +108,7 @@ public class DashboardTest extends LoginTest {
     }
 
     
-    @Test
+    @Test(priority=8)
     public void groupsCard(){
         // Branches-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -117,7 +120,7 @@ public class DashboardTest extends LoginTest {
         Assert.assertTrue(groups.getText().contains("Groups"), "The page is not Interact: Groups");
     }
 
-    @Test
+    @Test(priority=9)
     public void leadFieldCard(){
         // Branches-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
@@ -128,4 +131,60 @@ public class DashboardTest extends LoginTest {
         WebElement field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class=\"text-xl font-bold \"]")));
         Assert.assertTrue(field.getText().contains("Fields"), "The page is not Interact: Lead Fields");
     }
+
+    
+    @Test(priority=10)
+    public void SwithcBranchList(){
+
+        //click on lead Management dropdown
+        WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
+        leadManagementDropdown.click();
+
+        //Take list from the setup branch tab.
+          //Leads setup page
+        WebElement leadSetup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Lead Setup']")));
+        leadSetup.click();
+        Assert.assertTrue(leadSetup.isDisplayed(),"Leads setup page is not Interact");
+        Assert.assertEquals(leadSetup.getText(), "Lead Setup");
+
+        //Branch sections: 
+        WebElement branches = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Branches']")));
+        branches.click();
+
+        //list taken branch
+         List<WebElement> branchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+                By.xpath("//h3[@class=\"text-muted-foreground\"]")));
+
+        List<String> branchList = new ArrayList<>();
+        for (WebElement branch : branchElements) {
+            branchList.add(branch.getText().trim());
+        }
+
+        //interact with the dashboard and then check the branch.
+        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
+        dashboard.click();
+
+        WebElement switchBranch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Switch Branches']")));
+        switchBranch.click();
+
+        //list of branch from swtich list
+        List<WebElement> switchBranchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//div[@role=\"menuitem\"])[position()=1 < position()=3]")));
+            
+            List<String> switchBranchList = new ArrayList<>();
+            for (WebElement switchBranches : switchBranchElements) {
+             switchBranchList.add(switchBranches.getText().trim());
+            }
+
+            if (branchList.equals(switchBranchList)) {
+                System.out.println("Both lists match exactly.");
+            } else 
+                System.out.println("Lists do not match.");
+             // Print the extracted branch names
+             
+        System.out.println("Available Branches:");
+        for (String branch : switchBranchList) {
+            System.out.println(branch);
+        }
+    }
+    
 }
