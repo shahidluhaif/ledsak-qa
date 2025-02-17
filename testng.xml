@@ -3,7 +3,7 @@
 
     <test name="MyTest">
         <classes>
-          <class name="ledsak.LoginTest"/>
+          <class name="ledsak.AllLeadTest"/>
           <class name="ledsak.SidebarTest"/>
           <class name="ledsak.DashboardTest"/>       
         </classes>
