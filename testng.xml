@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TestSuite" verbose="10">
+<suite name="TestSuite" verbose="1" parallel="none">
 
-    <test name="MyTest">
-        <classes>
-          <class name="ledsak.AllLeadTest"/>
-          <class name="ledsak.SidebarTest"/>
-          <class name="ledsak.DashboardTest"/>       
-        </classes>
-    </test>   
+  <test name="MyTest">
+    <classes>
+      <class name="ledsak.AllLeadTest" />
+      <class name="ledsak.SidebarTest" />
+      <class name="ledsak.DashboardTest" />
+      <class name="ledsak.LoginTest" />
+    </classes>
+  </test>
 </suite>
-

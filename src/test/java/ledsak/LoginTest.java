@@ -19,24 +19,23 @@ public class LoginTest {
     WebDriver driver;
     WebDriverWait wait;
 
-    String url="https://testing.ledsak.ai"; //change with actual or testign url 
+    String url = "https://testing.ledsak.ai"; //change with actual or testign url 
 
- @BeforeClass
+    @BeforeClass
     public void setup() {
 
-        ChromeOptions options= new ChromeOptions();
-        options.addArguments("--headless");  // Run Chrome in headless mode
-        options.addArguments("--disable-gpu");  // Recommended for headless mode
-        options.addArguments("--no-sandbox");  // Bypass OS security model
-    
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
 
-        
-        driver.get(url);  
+        driver.get(url);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-        wait= new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         //Enter email 
         WebElement emailBox = wait.until(ExpectedConditions.elementToBeClickable(By.name("email")));
@@ -50,18 +49,18 @@ public class LoginTest {
         otpBox.click();
         otpBox.sendKeys("987654");
         otpBox.sendKeys(Keys.ENTER);
-       //Find Dashboard page for login confirm
-       WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-       Assert.assertTrue(dashboard.isDisplayed());
-       Assert.assertEquals(dashboard.getText(), "Dashboard", "The Dashboard is not open");        
+        //Find Dashboard page for login confirm
+        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
+        Assert.assertTrue(dashboard.isDisplayed());
+        Assert.assertEquals(dashboard.getText(), "Dashboard", "The Dashboard is not open");
     }
 
-     @AfterClass
+    @AfterClass
     public void tearDown() {
         // Close the browser after the test
         if (driver != null) {
             driver.quit();
         }
     }
-           
+
 }

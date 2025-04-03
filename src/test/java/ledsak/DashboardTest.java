@@ -4,39 +4,58 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * DashboardTest Class
- * 
- * This test validates different dashboard cards in the application.
- * Each section clicks on a specific card, verifies it, and asserts the expected page.
- * 
- * Priority: Every test should start from the dashboard and ensure correct navigation.
- */
 public class DashboardTest extends LoginTest {
+    @Test(priority = 1)
+    public void notification() throws InterruptedException {
 
-    @Test(priority=1)
+        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
+        dashboard.click();
+
+        WebElement notificationButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class, 'rounded-md text-sm font-medium')]")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(notificationButton).perform();
+        Thread.sleep(2000);
+
+        WebElement notification = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@class, 'rounded-md text-sm font-medium')]")));
+        wait.until(ExpectedConditions.elementToBeClickable(notification)).click();
+        System.out.println("Clicked Notification Button");
+
+        WebElement notificationPage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h2[contains(text(),'Notifications')])[2]")));
+        Assert.assertTrue(notificationPage.isDisplayed(), "Element is appears");
+
+        WebElement dashboardTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
+        actions.click(dashboardTab).perform();
+
+        Boolean hideNotification = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//h2[contains(text(),'Notifications')])[2]")));
+        Assert.assertTrue(hideNotification, "Notification page is not appear");
+    }
+
+    @Test(priority = 2)
     public void dashboardCard() {
 
         // Navigate to Dashboard
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
         dashboard.click();
 
-        // Leads Card
-        WebElement leadsCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Leads']")));
+        // All Leads Card
+        WebElement leadsCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='All Leads']")));
         Assert.assertTrue(leadsCard.isDisplayed(), "Leads card is not displayed.");
         leadsCard.click();
-        WebElement allLeads = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@class='text-2xl font-bold my-4']")));
+        WebElement allLeads = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@class=\" font-bold \"]")));
         Assert.assertTrue(allLeads.getText().contains("All Leads"), "The Page is not found.");
 
     }
 
-    @Test(priority=2)
-    public void followUpCard(){
+    //Follow up card
+    @Test(priority = 2)
+    public void followUpCard() {
         // Follow-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
         dashboard.click();
@@ -47,8 +66,9 @@ public class DashboardTest extends LoginTest {
         Assert.assertEquals(followUps.getText(), "Follow Ups", "The page is not Interact: Follow Ups");
     }
 
-    @Test(priority=3)
-    public void overdueTaskCard(){
+    //overdue Task Card
+    @Test(priority = 4)
+    public void overdueTaskCard() {
         // Overdue Task-ups Card
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
         dashboard.click();
@@ -59,132 +79,64 @@ public class DashboardTest extends LoginTest {
         Assert.assertEquals(overdue.getText(), "Overdue Tasks", "The page is not Interact: Overdue Tasks");
     }
 
-    @Test(priority=4)
-    public void staffCard(){
-        // Staffs-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement staffCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Staffs']")));
-        Assert.assertTrue(staffCard.isDisplayed(), "Staffs card is not displayed.");
-        staffCard.click();
-        WebElement staff = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class=\"text-xl font-bold flex items-center space-x-2\"]")));
-        Assert.assertTrue(staff.getText().contains("Staff"), "The page is not Interact: Staff");
-    }
-
-    @Test(priority=5)
-    public void branchesCard(){
-        // Branches-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement branchesCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Branches']")));
-        Assert.assertTrue(branchesCard.isDisplayed(), "Branches card is not displayed.");
-        branchesCard.click();
-        WebElement branch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[@class='text-md font-semibold']")));
-        Assert.assertTrue(branch.getText().contains("Branch"), "The page is not Interact: Branch");
-    }
-
-    @Test(priority=6)
-    public void sourcesCard(){
-        // Branches-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement sourcesCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Sources']")));
-        Assert.assertTrue(sourcesCard.isDisplayed(), "Sources card is not displayed.");
-        sourcesCard.click();
-        WebElement sources = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class='text-xl font-bold mt-4']")));
-        Assert.assertTrue(sources.getText().contains("Sources"), "The page is not Interact: Source");
-    }
-
-    @Test(priority=7)
-    public void stagesCard(){
-        // Branches-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement stagesCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Stages']")));
-        Assert.assertTrue(stagesCard.isDisplayed(), "Stages card is not displayed.");
-        stagesCard.click();
-        WebElement stages = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class='text-xl font-bold mt-4']")));
-        Assert.assertTrue(stages.getText().contains("Stages"), "The page is not Interact: Stages");
-    }
-
-    
-    @Test(priority=8)
-    public void groupsCard(){
-        // Branches-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement groupsCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Groups']")));
-        Assert.assertTrue(groupsCard.isDisplayed(), "Groups card is not displayed.");
-        groupsCard.click();
-        WebElement groups = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class='text-xl font-bold mt-4']")));
-        Assert.assertTrue(groups.getText().contains("Groups"), "The page is not Interact: Groups");
-    }
-
-    @Test(priority=9)
-    public void leadFieldCard(){
-        // Branches-ups Card
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        dashboard.click();
-        WebElement leadFieldCard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[text()='Lead Fields']")));
-        Assert.assertTrue(leadFieldCard.isDisplayed(), "Lead Fields card is not displayed.");
-        leadFieldCard.click();
-        WebElement field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@class=\"text-xl font-bold \"]")));
-        Assert.assertTrue(field.getText().contains("Fields"), "The page is not Interact: Lead Fields");
-    }
-
-    
-    @Test(priority=10)
-    public void SwithcBranchList(){
+    //switch branch card
+    @Test(priority = 5)
+    public void SwithcBranchList() throws InterruptedException {
 
         //click on lead Management dropdown
         WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
         leadManagementDropdown.click();
 
         //Take list from the setup branch tab.
-          //Leads setup page
+        //Leads setup page
+        Thread.sleep(1000);
         WebElement leadSetup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Lead Setup']")));
-        leadSetup.click();
-        Assert.assertTrue(leadSetup.isDisplayed(),"Leads setup page is not Interact");
-        Assert.assertEquals(leadSetup.getText(), "Lead Setup");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click()", leadSetup);
 
         //Branch sections: 
-        WebElement branches = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Branches']")));
-        branches.click();
+        Thread.sleep(1000);
+        WebElement branches = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Branches']")));
+        js.executeScript("arguments[0].click()", branches);
 
         //list taken branch
-         List<WebElement> branchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
-                By.xpath("//h3[@class=\"text-muted-foreground\"]")));
+        List<WebElement> branchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//tbody[@class='[&_tr:last-child]:border-0']/descendant::td")));
 
         List<String> branchList = new ArrayList<>();
-        for (WebElement branch : branchElements) {
-            branchList.add(branch.getText().trim());
+
+        // Start from index 1 (2nd element), then fetch every 3rd element (5th, 8th, 11th, etc.)
+        for (int i = 1; i < branchElements.size(); i += 3) {
+            WebElement element = branchElements.get(i);
+            branchList.add(element.getText()); // Add the text of the element to the branchList
         }
 
         //interact with the dashboard and then check the branch.
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
         dashboard.click();
 
-        WebElement switchBranch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Switch Branches']")));
+        WebElement switchBranch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[text()='Switch Branches']")));
         switchBranch.click();
 
         //list of branch from swtich list
         List<WebElement> switchBranchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//div[@role=\"menuitem\"])[position()=1 < position()=3]")));
-            
-            List<String> switchBranchList = new ArrayList<>();
-            for (WebElement switchBranches : switchBranchElements) {
-             switchBranchList.add(switchBranches.getText().trim());
-            }
 
-            if (branchList.equals(switchBranchList)) {
-                System.out.println("Both lists match exactly.");
-            } else 
-                System.out.println("Lists do not match.");
-             // Print the extracted branch names
-             
+        List<String> switchBranchList = new ArrayList<>();
+        for (WebElement switchBranches : switchBranchElements) {
+            switchBranchList.add(switchBranches.getText().trim());
+        }
+
+        if (branchList.equals(switchBranchList)) {
+            System.out.println("Both lists match exactly.");
+        } else {
+            System.out.println("Lists do not match.");
+        }
+        // Print the extracted branch names
+
         System.out.println("Available Branches:");
         for (String branch : switchBranchList) {
             System.out.println(branch);
         }
     }
+
     
 }

@@ -12,21 +12,28 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class AllLeadTest {
-     
-    private  WebDriver driver;
-    @Test
-    public void newLead() throws InterruptedException {
-        
-        try{
-        ChromeOptions options= new ChromeOptions();
-        options.addArguments("--headless");    
-        driver = new ChromeDriver(options);  // Always initialize a new instance
+
+    private WebDriver driver;
+    WebDriverWait wait;
+
+    @BeforeClass
+    public void setUp() {
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+
         driver.get("https://testing.ledsak.ai");
 
         // Login process
@@ -38,25 +45,40 @@ public class AllLeadTest {
 
         WebElement dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Dashboard']")));
         Assert.assertTrue(dashboard.isDisplayed(), "Dashboard is not open");
+    }
 
-       
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    //Lead Create manually check
+    @Test(priority = 1)
+    public void newLead() throws InterruptedException {
+
         WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
         leadManagementDropdown.click();
 
         WebElement allLeads = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Leads']")));
         allLeads.click();
-        Assert.assertTrue(allLeads.isDisplayed(), "All Leads page is not visible");
+        WebElement allLeadsRefresh = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='All Leads']")));
+        Assert.assertTrue(allLeadsRefresh.isDisplayed(), "All Leads page is not visible");
 
         WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Create']")));
         createButton.click();
 
-        WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Phone']/following::input[@placeholder='Name']")));
-        WebElement phoneBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Phone']/following::input[@placeholder='Phone']")));
-        WebElement branchBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@role='combobox'])[3]")));
-        WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Submit']")));
+        WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Name']/../child::input")));
+        WebElement phoneBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Phone']/../child::input")));
+        WebElement branchBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@role=\"combobox\"])[9]")));
+        WebElement createButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Create'])[2]")));
 
         String leadName = "Test Lead";
+        nameBox.click();
         nameBox.sendKeys(leadName);
+        Thread.sleep(1000);
+        phoneBox.click();
         phoneBox.sendKeys("1234567892");
 
         branchBox.click();
@@ -64,9 +86,9 @@ public class AllLeadTest {
         actions.sendKeys(Keys.DOWN, Keys.ENTER).perform();
 
         Thread.sleep(1000);
-        actions.moveToElement(submitButton);
-        submitButton.click();
-        actions.moveToLocation(650 , 200).click().perform();
+        actions.moveToElement(createButton2);
+        createButton2.click();
+        actions.moveToLocation(650, 200).click().perform();
 
         Thread.sleep(3000);
         // Verify lead creation
@@ -81,7 +103,7 @@ public class AllLeadTest {
         firstLeadDelete.click();
         //click on delete button
         Thread.sleep(1000);
-        WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='menuitem'][3]")));
+        WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='menuitem'][2]")));
         deleteButton.click();
         //click on continue button
         Thread.sleep(1000);
@@ -89,23 +111,47 @@ public class AllLeadTest {
         continueButton.click();
         Thread.sleep(5000);
 
-            By leadLocator = By.xpath("//table[@class='w-full caption-bottom text-sm']//tr[2]//p[1]");
-        
-            WebElement firstLeadTable = wait.until(ExpectedConditions.presenceOfElementLocated(leadLocator));
-            String actualText = firstLeadTable.getText();
-            
-            System.out.println("Actual text in table: " + actualText);
-            Assert.assertFalse(actualText.contains(leadName), "Lead was not deleted!");
-      
-            System.out.println("Element not found, assuming lead is deleted.");
+        By leadLocator = By.xpath("//table[@class='w-full caption-bottom text-sm']//tr[2]//p[1]");
 
+        WebElement firstLeadTable = wait.until(ExpectedConditions.presenceOfElementLocated(leadLocator));
+        String actualText = firstLeadTable.getText();
 
-        }
-        finally{
-            if (driver != null) {
-                driver.quit();
-            }
-        }
+        System.out.println("Actual text in table: " + actualText);
+        Assert.assertFalse(actualText.contains(leadName), "Lead was not deleted!");
+
+        System.out.println("Element not found, assuming lead is deleted.");
+    }
+
+    //Date Filter 
+    @Test(priority = 2)
+    public void dateFilter() throws InterruptedException {
+        // WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
+        // leadManagementDropdown.click();
+
+        WebElement allLeads = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Leads']")));
+        allLeads.click();
+        WebElement allLeadsRefresh = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='All Leads']")));
+        Assert.assertTrue(allLeadsRefresh.isDisplayed(), "All Leads page is not visible");
+
+        WebElement dateFilter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(), \"All Time\")]")));
+        dateFilter.click();
+        Thread.sleep(100);
+
+        WebElement todayFilter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(), \"Today\")]")));
+        todayFilter.click();
+
+        WebElement closeFilter = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class=\"h-4 cursor-pointer w-4 text-blue-700\"]")));
+        closeFilter.click();
+
+        //Filter select
+        WebElement newLead = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'New Lead')]")));
+        newLead.click();
+        Thread.sleep(2000);
+
+        WebElement allLeadsOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Leads']")));
+        allLeadsOption.click();
+        WebElement allLeadsRefreshed = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='All Leads']")));
+        Assert.assertTrue(allLeadsRefreshed.isDisplayed(), "All Leads page is not visible");
+
     }
 }
-
