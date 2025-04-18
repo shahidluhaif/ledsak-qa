@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" verbose="1" parallel="none">
 
-  <test name="app-Test">
+  <test name="app">
     <classes>
       <class name="ledsak.AllLeadTest" />
       <class name="ledsak.SidebarTest" />
@@ -11,7 +11,7 @@
   </test>
 
 
-  <test name="website-Test">
+  <test name="website">
     <classes>
       <class name="website.HomeTest" />
       <class name="website.PricingTest" />
