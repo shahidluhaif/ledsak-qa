@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DashboardTest extends LoginTest {
+
     @Test(priority = 1)
     public void notification() throws InterruptedException {
 
@@ -138,5 +139,4 @@ public class DashboardTest extends LoginTest {
         }
     }
 
-    
 }

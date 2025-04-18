@@ -49,10 +49,35 @@ public class LoginTest {
         otpBox.click();
         otpBox.sendKeys("987654");
         otpBox.sendKeys(Keys.ENTER);
+
+        //sider check open 
+        try {
+            WebElement firstElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='h-full no-scrollbar overflow-y-visible']")));
+
+            if (firstElement.isDisplayed()) {
+                System.out.println("Sider is closed try to open...");
+
+                // Wait for the second XPath element to be clickable and click it
+                WebElement secondElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='w-6 h-6 md:w-7 md:h-7 z-40 flex fixed justify-center items-center top-16 left-12 cursor-pointer bg-white border rounded-full']")));
+                secondElement.click();
+                System.out.println("sider open succesfully.");
+            }
+
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        } finally {
+            // Wait for a few seconds before closing the browser (optional)
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
         //Find Dashboard page for login confirm
-        WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
-        Assert.assertTrue(dashboard.isDisplayed());
-        Assert.assertEquals(dashboard.getText(), "Dashboard", "The Dashboard is not open");
+        WebElement dashboard = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Dashboard']")));
+        wait.until(ExpectedConditions.visibilityOf(dashboard));
+        Assert.assertTrue(dashboard.isDisplayed(), "Dashboard is not open");
     }
 
     @AfterClass
