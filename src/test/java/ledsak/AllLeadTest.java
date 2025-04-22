@@ -211,6 +211,7 @@ public class AllLeadTest {
         WebElement sources = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Lead Sources']")));
         js.executeScript("arguments[0].click()", sources);
 
+        Thread.sleep(2000);
         List<WebElement> sourcesFetch = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//tbody[@class='[&_tr:last-child]:border-0']/descendant::td")));
         List<String> sourcesList = new ArrayList<>();
 

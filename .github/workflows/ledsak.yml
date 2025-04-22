@@ -1,4 +1,4 @@
-name: Ledsak Automation
+name: Ledsak Web App
 
 on:
   push:
