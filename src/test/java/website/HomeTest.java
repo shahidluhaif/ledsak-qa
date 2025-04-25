@@ -57,6 +57,7 @@ public class HomeTest  {
         WebElement bookbutton = wait.until(ExpectedConditions.elementToBeClickable(bookFreeDemo));
         bookbutton.click();
 
+        Thread.sleep((1000));
         //check the book a demo form is open or not.
         WebElement popUpDemo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[text()='Ledsak - Schedule Demo']")));
         Assert.assertEquals(popUpDemo.getText(), "Ledsak - Schedule Demo");

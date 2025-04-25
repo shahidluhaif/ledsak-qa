@@ -70,7 +70,7 @@ public class LoginTest {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+               System.out.println("find the interruped occured");
             }
         }
 

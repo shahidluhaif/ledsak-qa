@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '30 4 * * *'  # Runs every day at 10:00 AM IST (4:30 AM UTC)
 
 jobs:
   test:
@@ -32,4 +34,3 @@ jobs:
 
       - name: Run Tests with Maven
         run: mvn clean test
-    

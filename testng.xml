@@ -7,6 +7,8 @@
       <class name="ledsak.SidebarTest" />
       <class name="ledsak.DashboardTest" />
       <class name="ledsak.LoginTest" />
+      <class name="ledsak.LeadSetupTest" />
+      <class name="ledsak.LeadCreateTest" />
     </classes>
   </test>
 

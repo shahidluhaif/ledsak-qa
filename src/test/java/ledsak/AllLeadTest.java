@@ -66,7 +66,7 @@ public class AllLeadTest {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+              System.out.println("Thread was intreppted");
             }
         }
 
