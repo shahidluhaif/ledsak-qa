@@ -18,7 +18,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class contactUsTest {
+public class ContactUsTest {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -81,12 +81,41 @@ public class contactUsTest {
         System.out.println("Random 3 characters: " + randomChars.toString());
 
         WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"name\"]")));
-        WebElement emailBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"email\"]")));
-        String expectedValue = "Test";
+        String namevalue="Test";
+        nameBox.click();
+        nameBox.clear(); // Optional: clear existing value
+        nameBox.sendKeys(namevalue);
 
+        // Validate the input's value
+        String actualValue1 = nameBox.getAttribute("value");
+
+        // Assertion / Validation
+        if (namevalue.equals(actualValue1)) {
+            System.out.println("✅ Input value set correctly: " + actualValue1);
+        } else {
+            System.out.println("❌ Value mismatch! Expected: " + actualValue1 + ", but got: " + namevalue);
+        }
+
+
+        WebElement emailBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"email\"]")));
+        String emailValue2 = "test@gmail.com";
+
+        emailBox.click();
+        emailBox.clear(); // Optional: clear existing value
+        emailBox.sendKeys(emailValue2);
+
+        // Validate the input's value
+        String actualValue2 = emailBox.getAttribute("value");
+
+        // Assertion / Validation
+        if (emailValue2.equals(actualValue2)) {
+            System.out.println("✅ Input value set correctly: " + actualValue2);
+        } else {
+            System.out.println("❌ Value mismatch! Expected: " + emailValue2 + ", but got: " + actualValue2);
+        }
         // Locate the input element
         WebElement companyBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='company']")));
-
+       String expectedValue="ledsak";
         // Send value
         companyBox.click();
         companyBox.clear(); // Optional: clear existing value

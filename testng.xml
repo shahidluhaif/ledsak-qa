@@ -16,6 +16,7 @@
     <classes>
       <class name="website.HomeTest" />
       <class name="website.PricingTest" />
+      <class name="website.ContactUsTest" />
     </classes>
   </test>
 
