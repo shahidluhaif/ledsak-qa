@@ -1,4 +1,4 @@
-name: Ledsak Web App
+name: Ledsak App
 
 on:
   push:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Cache Maven packages
+        uses: actions/cache@v4
 
       - name: Set Up JDK 17
         uses: actions/setup-java@v3
