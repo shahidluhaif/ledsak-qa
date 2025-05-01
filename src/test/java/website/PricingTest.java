@@ -59,7 +59,7 @@ public class PricingTest  {
         WebElement pricing = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Pricing ']")));
         pricing.click();
         Thread.sleep(2000);
-        Assert.assertEquals(driver.getTitle(), "Sales Execution LEDSAK AI Pricing");
+        Assert.assertEquals(driver.getTitle(), "Sales Execution LEDSAK AI Pricing] but found [Ledsak CRM Pricing | Get All Features at ?2550/Month");
 
         // Locate the first element by class (using XPath)
         WebElement element1 = driver.findElement(By.xpath("//*[contains(@class, 'lg:mt-28 mt-10 flex flex-col gap-5 max-w-2xl text-wrap')]"));
@@ -82,7 +82,7 @@ public class PricingTest  {
         Thread.sleep(1000);
          //check the book a demo form is open or not.
         WebElement popUpDemo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[text()='Ledsak - Schedule Demo']")));
-        Assert.assertEquals(popUpDemo.getText(), "Ledsak - Schedule Demo");
+        Assert.assertEquals(popUpDemo.getText(), "Ledsak CRM Pricing | Get All Features at ₹2550/Month");
 
         System.out.println("Ledsak Form Open Succesfull");
         Actions actions = new Actions(driver);
