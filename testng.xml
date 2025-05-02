@@ -10,6 +10,8 @@
       <class name="ledsak.LoginTest" />
       <class name="ledsak.LeadSetupTest" />
       <class name="ledsak.LeadCreateTest" />
+      <class name="ledsak.CreatestaffTest" />
+      <class name="ledsak.RoleSetupTest" />
     </classes>
   </test>
 

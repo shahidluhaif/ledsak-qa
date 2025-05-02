@@ -92,7 +92,7 @@ public class HomeTest  {
         for (int i = 0; i <= windowList.size() - 1; i++) {
             driver.switchTo().window(windowList.get(i));
 
-            if (driver.getTitle().contains("Ledsak Website")) {
+            if (driver.getTitle().contains("Contact Ledsak CRM Experts | Get Support or a Free Demo")) {
                 System.out.println("Contact Button clicked succesfull and page is appears");
             } else {
                 System.out.println("Contact Button is not clicked.");
