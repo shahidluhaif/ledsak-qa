@@ -111,7 +111,7 @@ public class LeadSetupTest {
         WebElement fieldName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"field_name\"]")));
         // WebElement fieldIdentifier = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"field_identifier\"]")));
         WebElement fieldType = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@role=\"combobox\"]")));
-        List<WebElement> checksField = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//div[@class=\"flex items-center gap-2\"])[position() >= 11 and position() <= 15]")));
+        List<WebElement> checksField = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//div[@class=\"flex items-center gap-2\"])[position() >= 12 and position() <= 16]")));
 
         Actions actions = new Actions(driver);
         actions.click(fieldName).sendKeys("Test").perform();
