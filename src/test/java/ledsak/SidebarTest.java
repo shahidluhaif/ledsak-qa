@@ -180,7 +180,7 @@ public class SidebarTest extends LoginTest {
         js.executeScript("arguments[0].scrollIntoView(true);", setting);
         setting.click();
 
-        //staff page
+        //customize page
         WebElement customize = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
         js.executeScript("arguments[0].scrollIntoView(true);", customize);
         customize.click();
@@ -188,7 +188,7 @@ public class SidebarTest extends LoginTest {
         Assert.assertEquals(customizeTab.getText(), "Customize");
         System.out.println("Customize page open: Successfull");
 
-        //Attendance page
+        //template page
         WebElement template = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Template']")));
         js.executeScript("arguments[0].scrollIntoView(true);", template);
         template.click();

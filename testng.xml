@@ -12,6 +12,7 @@
       <class name="ledsak.LeadCreateTest" />
       <class name="ledsak.CreatestaffTest" />
       <class name="ledsak.RoleSetupTest" />
+      <class name="ledsak.CustomizepageTest" />
     </classes>
   </test>
 
