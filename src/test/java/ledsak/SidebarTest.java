@@ -7,55 +7,58 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SidebarTest extends LoginTest{
+public class SidebarTest extends LoginTest {
 
     //Lead Mangement Dropdown
-    @Test (priority=1)
-    public void leadManagement(){
+    @Test(priority = 1)
+    public void leadManagement() {
 
         WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
         leadManagementDropdown.click();
         System.out.println("Lead Management Dropdown open.");
 
         //All Leads page
+        // Click on All Leads after waiting for it to be clickable
         WebElement allLeads = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Leads']")));
         allLeads.click();
-        Assert.assertTrue(allLeads.isDisplayed(),"All Leads page is not Interact");
-        Assert.assertEquals(allLeads.getText(), "All Leads");
+
+        // Re-locate the element again to avoid stale reference
+        WebElement refreshedAllLeads = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='All Leads']")));
+
+        // Assert after re-locating
+        Assert.assertTrue(refreshedAllLeads.isDisplayed(), "All Leads page is not interactable");
+        Assert.assertEquals(refreshedAllLeads.getText(), "All Leads");
         System.out.println("All Lead page is Interact");
 
         //Leads setup page
         WebElement leadSetup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Lead Setup']")));
         leadSetup.click();
-        Assert.assertTrue(leadSetup.isDisplayed(),"Leads setup page is not Interact");
-        Assert.assertEquals(leadSetup.getText(), "Lead Setup");
+
+        WebElement leadSetupRefresh = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Lead Setup']")));
+        Assert.assertTrue(leadSetupRefresh.isDisplayed(), "Leads setup page is not Interact");
+        Assert.assertEquals(leadSetupRefresh.getText(), "Lead Setup");
         System.out.println("Lead setup page is Interact");
 
         //Lead Distribution page
         WebElement leadDistribution = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Lead Distribution']")));
         leadDistribution.click();
-        Assert.assertTrue(leadDistribution.isDisplayed(),"Leads Distribution page is not Interact");
-        Assert.assertEquals(leadDistribution.getText(), "Lead Distribution");
+        WebElement leadDistributionTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Lead Distribution']")));
+        Assert.assertTrue(leadDistributionTab.isDisplayed(), "Leads Distribution page is not Interact");
+        Assert.assertEquals(leadDistributionTab.getText(), "Lead Distribution");
         System.out.println("Lead Distribution page is Interact");
 
-        //Lead Distribution page
-        WebElement reports = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Reports']")));
-        reports.click();
-        Assert.assertTrue(reports.isDisplayed(),"Leads Distribution page is not Interact");
-        Assert.assertEquals(reports.getText(), "Reports");
-        System.out.println("Reports page is Interact");
-
         //Export History page
-        WebElement exportHistory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Export history']")));
+        WebElement exportHistory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Export History']")));
         exportHistory.click();
-        Assert.assertTrue(exportHistory.isDisplayed(),"Export History page is not Interact");
-        Assert.assertEquals(exportHistory.getText(), "Export history");
+        WebElement exportHistoryTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Export History']")));
+        Assert.assertTrue(exportHistoryTab.isDisplayed(), "Export History page is not Interact");
+        Assert.assertEquals(exportHistoryTab.getText(), "Export History");
         System.out.println("Export History page is Interact");
-    }  
+    }
 
     //Deal Management Dropdown
-    @Test (priority=2)
-    public void dealManagement(){
+    @Test(priority = 2)
+    public void dealManagement() {
 
         WebElement dealManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Deal Management']")));
         dealManagementDropdown.click();
@@ -64,113 +67,134 @@ public class SidebarTest extends LoginTest{
         //All Deals page
         WebElement allDeals = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Deals']")));
         allDeals.click();
-        Assert.assertTrue(allDeals.isDisplayed(),"All Deals page is not Interact");
-        Assert.assertEquals(allDeals.getText(),"All Deals");
+        WebElement allDealsTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Deals']")));
+        Assert.assertEquals(allDealsTab.getText(), "All Deals");
         System.out.println("All Deals page is Interact");
 
         //Won Deals page
         WebElement wonDeals = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Won Deals']")));
         wonDeals.click();
-        Assert.assertTrue(wonDeals.isDisplayed(),"Export History page is not Interact");
-        Assert.assertEquals(wonDeals.getText(), "Won Deals");
+        WebElement wonDealsTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Won Deals']")));
+        Assert.assertTrue(wonDealsTab.isDisplayed(), "Export History page is not Interact");
+        Assert.assertEquals(wonDealsTab.getText(), "Won Deals");
         System.out.println("Won Deals page is Interact");
     }
 
-     //Opportunities section
-     @Test (priority=3)
-     public void opportunities(){
- 
-         WebElement opportunities= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Opportunities']")));
-         opportunities.click();
-         System.out.println("Opportunities Page open: Successfull");
-     }
-     
+    //Opportunities section
+    @Test(priority = 3)
+    public void opportunities() {
+
+        WebElement opportunities = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Actions']")));
+        opportunities.click();
+        System.out.println("Actions Page open: Successfull");
+    }
+
     //Automation section
-    @Test (priority=4)
-    public void automation(){
- 
-        WebElement autoamtion= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Automation']")));
+    @Test(priority = 4)
+    public void automation() {
+
+        WebElement autoamtion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Automation']")));
         autoamtion.click();
         System.out.println("Automation Page open: Successfull");
     }
-    
-     //Integration section
-    @Test (priority=5)
-    public void integrations(){
- 
-        WebElement integration= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Integrations']")));
+
+    //Integration section
+    @Test(priority = 5)
+    public void integrations() {
+
+        WebElement integration = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Integrations']")));
         integration.click();
         System.out.println("Integrations Page open: Successfull");
     }
 
-     //Staff Management dropdown
-     @Test (priority=6)
-     public void staffManagement(){
-        
-        JavascriptExecutor js= (JavascriptExecutor)driver;
-        
+    //Report Section
+    @Test(priority = 6)
+    public void report() {
+        //Lead Distribution page
+        WebElement reports = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Reports']")));
+        reports.click();
+        Assert.assertTrue(reports.isDisplayed(), "Report page is not Interact");
+        Assert.assertEquals(reports.getText(), "Reports");
+        System.out.println("Reports page is Interact");
 
-        WebElement staffMangement= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Staff Management']")));
+        WebElement graphData = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Graph Data']")));
+        graphData.click();
+
+        WebElement tableData = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Table Data']")));
+        tableData.click();
+    }
+
+    //Staff Management dropdown
+    @Test(priority = 7)
+    public void staffManagement() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement staffMangement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Staff Management']")));
         js.executeScript("arguments[0].scrollIntoView(true);", staffMangement);
         staffMangement.click();
-        
+
         //staff page
-        WebElement staff= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Staff']")));
+        WebElement staff = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Staff']")));
         js.executeScript("arguments[0].scrollIntoView(true);", staff);
         staff.click();
-        Assert.assertTrue(staff.isDisplayed());
-        Assert.assertEquals(staff.getText(), "Staff");
+        WebElement staffTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Staff']")));
+        Assert.assertEquals(staffTab.getText(), "Staff");
         System.out.println("Staff page open: Successfull");
 
         //Attendance page
-        WebElement attendance= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Attendance']")));
+        WebElement attendance = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Attendance']")));
         js.executeScript("arguments[0].scrollIntoView(true);", attendance);
         attendance.click();
-        Assert.assertTrue(attendance.isDisplayed());
-        Assert.assertEquals(attendance.getText(), "Attendance");
+        WebElement attendanceTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Attendance']")));
+        Assert.assertTrue(attendanceTab.isDisplayed());
+        Assert.assertEquals(attendanceTab.getText(), "Attendance");
         System.out.println("Attendance page open: Successfull");
 
         //Role and permission page
-        WebElement roleAndPermission= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Roles & Permissions']")));
+        WebElement roleAndPermission = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Roles & Permissions']")));
         js.executeScript("arguments[0].scrollIntoView(true);", roleAndPermission);
         roleAndPermission.click();
-        Assert.assertTrue(roleAndPermission.isDisplayed());
-        Assert.assertEquals(roleAndPermission.getText(), "Roles & Permissions");
+        WebElement roleAndPermissionTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Roles & Permissions']")));
+        Assert.assertTrue(roleAndPermissionTab.isDisplayed());
+        Assert.assertEquals(roleAndPermissionTab.getText(), "Roles & Permissions");
         System.out.println("Roles & Permissions page open: Successfull");
-        
+
         //Login History page
-        WebElement loginHistory= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Login History']")));
+        WebElement loginHistory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Login History']")));
         js.executeScript("arguments[0].scrollIntoView(true);", loginHistory);
         loginHistory.click();
-        Assert.assertTrue(loginHistory.isDisplayed());
-        Assert.assertEquals(loginHistory.getText(), "Login History");
+        WebElement loginHistoryTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Login History']")));
+        Assert.assertTrue(loginHistoryTab.isDisplayed());
+        Assert.assertEquals(loginHistoryTab.getText(), "Login History");
         System.out.println("Login History page open: Successfull");
     }
 
-     //Settings dropdown
-     @Test (priority=7)
-     public void setting(){
-        
-        JavascriptExecutor js= (JavascriptExecutor)driver;
- 
-        WebElement setting= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
+    //Settings dropdown
+    @Test(priority = 8)
+    public void settings() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement setting = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
         js.executeScript("arguments[0].scrollIntoView(true);", setting);
         setting.click();
-        
-        //staff page
-        WebElement customize= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
+
+        //customize page
+        WebElement customize = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
         js.executeScript("arguments[0].scrollIntoView(true);", customize);
         customize.click();
-        Assert.assertTrue(customize.isDisplayed());
-        Assert.assertEquals(customize.getText(), "Customize");
+        WebElement customizeTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
+        Assert.assertEquals(customizeTab.getText(), "Customize");
         System.out.println("Customize page open: Successfull");
 
-        //Attendance page
-        WebElement template= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Template']")));
+        //template page
+        WebElement template = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Template']")));
         js.executeScript("arguments[0].scrollIntoView(true);", template);
         template.click();
-        Assert.assertTrue(template.isDisplayed());
-        Assert.assertEquals(template.getText(), "Template");
+        WebElement templateTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Template']")));
+        Assert.assertTrue(templateTab.isDisplayed());
+        Assert.assertEquals(templateTab.getText(), "Template");
         System.out.println("Template page open: Successfull");
     }
 }
