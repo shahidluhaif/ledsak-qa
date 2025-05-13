@@ -172,7 +172,7 @@ public class SidebarTest extends LoginTest {
 
     //Settings dropdown
     @Test(priority = 8)
-    public void settings() {
+    public void settings() throws InterruptedException {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -184,6 +184,7 @@ public class SidebarTest extends LoginTest {
         WebElement customize = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
         js.executeScript("arguments[0].scrollIntoView(true);", customize);
         customize.click();
+        Thread.sleep(300);
         WebElement customizeTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Customize']")));
         Assert.assertEquals(customizeTab.getText(), "Customize");
         System.out.println("Customize page open: Successfull");

@@ -114,9 +114,10 @@ public class DashboardTest extends LoginTest {
         //interact with the dashboard and then check the branch.
         WebElement dashboard = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Dashboard']")));
         dashboard.click();
-
+        Thread.sleep(300);
         WebElement switchBranch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[text()='Switch Branches']")));
         switchBranch.click();
+        Thread.sleep(300);
 
         //list of branch from swtich list
         List<WebElement> switchBranchElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//div[@role=\"menuitem\"])[position()=1 < position()=3]")));
@@ -131,8 +132,8 @@ public class DashboardTest extends LoginTest {
         } else {
             System.out.println("Lists do not match.");
         }
+        
         // Print the extracted branch names
-
         System.out.println("Available Branches:");
         for (String branch : switchBranchList) {
             System.out.println(branch);
