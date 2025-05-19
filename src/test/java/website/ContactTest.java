@@ -54,6 +54,7 @@ public class ContactTest {
         WebElement contact = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Contact']")));
         contact.click();
         waitForPageLoad(driver);
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.ledsak.ai/contact-us");
 
         WebElement contactPage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Contact Sales']")));
