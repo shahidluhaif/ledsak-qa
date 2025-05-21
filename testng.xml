@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" verbose="1" parallel="none">
- 
+
   <!-- App Test Classes -->
   <test name="app">
     <classes>
@@ -13,6 +13,8 @@
       <class name="ledsak.CreatestaffTest" />
       <class name="ledsak.RoleSetupTest" />
       <class name="ledsak.CustomizepageTest" />
+      <class name="ledsak.DatefilterTest" />
+
     </classes>
   </test>
 
