@@ -226,6 +226,7 @@ public class LeadSetupTest {
         WebElement createGroup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Create']")));
         js.executeScript("arguments[0].click();", createGroup);
 
+        Thread.sleep(1000);
         WebElement groupName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[contains(@id, 'group_name')]")));
         WebElement chooseColor = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Choose color']")));
         WebElement savegroup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Save']")));
@@ -236,7 +237,7 @@ public class LeadSetupTest {
         actions.keyDown(Keys.UP).keyDown(Keys.ENTER).perform();
         Thread.sleep(200);
         actions.click(savegroup).perform();
-        System.out.println("group created succesfully");
+        System.out.println("Group created succesfully");
 
         Thread.sleep(3000);
 
