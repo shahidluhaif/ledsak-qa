@@ -230,7 +230,9 @@ public class LeadSetupTest {
         WebElement groupName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[contains(@id, 'group_name')]")));
         WebElement chooseColor = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Choose color']")));
         WebElement savegroup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Save']")));
-        actions.click(groupName).sendKeys("Test").perform();
+        js.executeScript("arguments[0].click();", groupName);
+        Thread.sleep(300);
+        groupName.sendKeys("Test");
         Thread.sleep(300);
         actions.click(chooseColor).perform();
         Thread.sleep(1000);

@@ -2,6 +2,7 @@ package ledsak;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -109,7 +110,8 @@ public class RoleSetupTest {
 
         WebElement nameRole = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"name\"]")));
         nameRole.click();
-        nameRole.sendKeys("Test");
+        String roleNameText = "Test";
+        nameRole.sendKeys(roleNameText);
         Actions action = new Actions(driver);
 
         List<WebElement> nameRoleBox = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//button[@type=\"button\" and @role=\"checkbox\"]")));
@@ -140,7 +142,18 @@ public class RoleSetupTest {
         Thread.sleep(2000);
         WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue']")));
         js.executeScript("arguments[0].click();", deleteButton);
-        System.out.println("Role deleted succesfully");
 
+        ArrayList<String> actualName = new ArrayList<>();
+        for (WebElement rowName : rowsStaff) {
+            String roleName = rowName.getText();
+            actualName.add(roleName);
+        }
+        System.out.println(actualName);
+
+        if (actualName.contains(roleNameText)) {
+            System.out.println("Role created not delete.");
+        } else {
+            System.out.println("Role created delete succesfull");
+        }
     }
 }
