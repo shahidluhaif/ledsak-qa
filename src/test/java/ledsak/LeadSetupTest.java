@@ -28,12 +28,14 @@ public class LeadSetupTest {
     public void setUp() throws IOException, InterruptedException {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+        // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
@@ -225,9 +227,6 @@ public class LeadSetupTest {
         Thread.sleep(2000);
         WebElement createGroup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Create']")));
         js.executeScript("arguments[0].click();", createGroup);
-
-        WebElement createGroupText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"font-semibold text-[18px] leading-[28px] text-[#1A244D]\"]")));
-        createGroupText.click();
 
         WebElement groupName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id=\"group_name\"]")));
         WebElement chooseColor = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Choose color']")));

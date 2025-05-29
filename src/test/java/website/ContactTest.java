@@ -27,12 +27,17 @@ public class ContactTest {
     public void LaunchURL() throws IOException {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+        // Remove this: driver.manage().window().maximize();
+
+        driver = new ChromeDriver(options);
+        // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -50,9 +55,11 @@ public class ContactTest {
 
     @Test
     public void contactUs() throws InterruptedException {
-        waitForPageLoad(driver);
-        WebElement contact = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Contact']")));
+
+        WebElement contact = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//a[@href=\"/contact-us\"])[1]")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", contact);
         contact.click();
+
         waitForPageLoad(driver);
         Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.ledsak.ai/contact-us");
@@ -82,7 +89,7 @@ public class ContactTest {
         System.out.println("Random 3 characters: " + randomChars.toString());
 
         WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"name\"]")));
-        String namevalue="Test";
+        String namevalue = "Test";
         nameBox.click();
         nameBox.clear(); // Optional: clear existing value
         nameBox.sendKeys(namevalue);
@@ -96,7 +103,6 @@ public class ContactTest {
         } else {
             System.out.println("❌ Value mismatch! Expected: " + actualValue1 + ", but got: " + namevalue);
         }
-
 
         WebElement emailBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"email\"]")));
         String emailValue2 = "test@gmail.com";
@@ -116,7 +122,7 @@ public class ContactTest {
         }
         // Locate the input element
         WebElement companyBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='company']")));
-       String expectedValue="ledsak";
+        String expectedValue = "ledsak";
         // Send value
         companyBox.click();
         companyBox.clear(); // Optional: clear existing value

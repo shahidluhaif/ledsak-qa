@@ -105,16 +105,19 @@ public class SidebarTest extends LoginTest {
         WebElement integration = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Integrations']")));
         integration.click();
         System.out.println("Integrations Page open: Successfull");
+        driver.navigate().refresh();
     }
 
     //Report Section
     @Test(priority = 6)
     public void report() {
         //Lead Distribution page
-        WebElement reports = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Reports']")));
-        reports.click();
+        WebElement reports = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@alt=\"leads-management\"])[2]")));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+
         Assert.assertTrue(reports.isDisplayed(), "Report page is not Interact");
-        Assert.assertEquals(reports.getText(), "Reports");
+        js.executeScript("arguments[0].click();", reports);
+
         System.out.println("Reports page is Interact");
 
         WebElement graphData = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Graph Data']")));

@@ -28,12 +28,14 @@ public class CreatestaffTest {
     public void setUp() throws IOException, InterruptedException {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+        // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
@@ -86,7 +88,7 @@ public class CreatestaffTest {
 
     //create staff and delete check
     @Test
-    public void createStaff() throws InterruptedException{
+    public void createStaff() throws InterruptedException {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //staff management dropdown open
@@ -106,7 +108,7 @@ public class CreatestaffTest {
         WebElement createStaff = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Create']")));
         js.executeScript("arguments[0].click();", createStaff);
 
-        Actions action= new Actions(driver);
+        Actions action = new Actions(driver);
         WebElement nameField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"name\"]")));
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"email\"]")));
         WebElement phoneField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name=\"phone\"]")));
@@ -126,7 +128,7 @@ public class CreatestaffTest {
         WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Create'])[2]")));
         action.click(createButton).perform();
         System.out.println("Staff created succesfull");
-         Thread.sleep(3000);
+        Thread.sleep(3000);
 
         List<WebElement> rowsStaff = driver.findElements(By.xpath("//tr[@class='border-b transition-colors group hover:bg-muted/50 data-[state=selected]:bg-muted']"));
 

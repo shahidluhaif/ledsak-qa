@@ -28,12 +28,14 @@ public class AllLeadTest {
     public void setUp() {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+        // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
@@ -66,7 +68,7 @@ public class AllLeadTest {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
-              System.out.println("Thread was intreppted");
+                System.out.println("Thread was intreppted");
             }
         }
 
