@@ -34,3 +34,4 @@ test-output/
 # OS-specific files
 .DS_Store
 Thumbs.db
+.allure-results

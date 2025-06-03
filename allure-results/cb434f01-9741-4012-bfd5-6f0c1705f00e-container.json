@@ -1,0 +1,1 @@
+{"uuid":"cb434f01-9741-4012-bfd5-6f0c1705f00e","name":"ledsak.RoleSetupTest.setUp","children":["6bdff227-d664-4711-8e59-e267beaa1334"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1748934036989,"stop":1748934046753}],"afters":[],"start":1748934036989,"stop":1748934046753}

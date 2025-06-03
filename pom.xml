@@ -1,12 +1,12 @@
-<project 
-    xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ledsak</groupId>
     <artifactId>demo</artifactId>
-    <version>1.0</version>
+    <version>v1.0</version>
     <packaging>jar</packaging>
     <name>demo</name>
     <url>http://maven.apache.org</url>
@@ -51,6 +51,13 @@
             <artifactId>log4j-api</artifactId>
             <version>2.22.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.24.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -66,6 +73,13 @@
                 </configuration>
             </plugin>
 
+            <!-- Allure Report Plugin -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version> <!-- Use the latest version -->
+            </plugin>
+
             <!-- Surefire Plugin to run TestNG tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -75,7 +89,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <reportsDirectory>./surefire-reports</reportsDirectory>
                     <!-- Removed <debug> because it's not supported -->
                 </configuration>
             </plugin>

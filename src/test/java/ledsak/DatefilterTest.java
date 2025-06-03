@@ -117,10 +117,10 @@ public class DatefilterTest {
                 ExpectedConditions.presenceOfAllElementsLocatedBy(
                         By.xpath("//tbody[@class='rdp-tbody']//td[not(contains(@class, 'rdp-day_disabled'))]")));
 
-        // Click on the date "10"
+        // Click on the date "1"
         for (WebElement date : dates) {
             String dateText = date.getText().trim();
-            if (dateText.equals("10")) {
+            if (dateText.equals("1")) {
                 date.click();
                 break;
             }
@@ -143,7 +143,7 @@ public class DatefilterTest {
 
         Thread.sleep(3000);
 
-        WebElement selectedcustomDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@class=\"text-blue-700 text-xs\"]")));
+        WebElement selectedcustomDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@class='text-blue-700 text-xs']")));
         String dateText = selectedcustomDate.getText();
         if(dateText.contains(today)){
             System.out.println("Custom date select Succesfull");
