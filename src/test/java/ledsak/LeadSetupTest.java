@@ -28,7 +28,7 @@ public class LeadSetupTest {
     public void setUp() throws IOException, InterruptedException {
 
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless=new");
+        options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
@@ -216,9 +216,10 @@ public class LeadSetupTest {
                 break; // exit loop if you only want to do this for the first matching row
             }
         }
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement continueButtonSource = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue']")));
         js.executeScript("arguments[0].click();", continueButtonSource);
+        Thread.sleep(2000);
         System.out.println("Source deleted succesfully");
 
         //Group create and delete check
