@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>app</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 03 12:26:08 IST 2025</td>
+<td>Started on:</td><td>Wed Jun 04 10:33:11 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>341 seconds (341747 ms)</td>
+<tr><td>Total time:</td><td>371 seconds (371639 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,91 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ledsak.LeadSetupTest.leadset()'><b>leadset</b><br>Test class: ledsak.LeadSetupTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4195201095bc6d427286ce0bf43d5281, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.496003F4ADBB3861E93F439C4A3F8C81.d.926EFD6808AD768FEA84B51A9CC753A3.e.1741}], script=arguments[0].click();}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54084/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4195201095bc6d427286ce0bf43d5281
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at ledsak.LeadSetupTest.leadset(LeadSetupTest.java:229)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace154923232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace154923232'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4195201095bc6d427286ce0bf43d5281, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.496003F4ADBB3861E93F439C4A3F8C81.d.926EFD6808AD768FEA84B51A9CC753A3.e.1741}], script=arguments[0].click();}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54084/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4195201095bc6d427286ce0bf43d5281
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at ledsak.LeadSetupTest.leadset(LeadSetupTest.java:229)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>35</td>
+<td>ledsak.LeadSetupTest@7d900ecf</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,115 +161,110 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ledsak.SidebarTest.leadManagement()'><b>leadManagement</b><br>Test class: ledsak.SidebarTest</td>
+<td title='ledsak.AllLeadTest.dateFilter()'><b>dateFilter</b><br>Test class: ledsak.AllLeadTest</td>
 <td></td>
-<td>4</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>14</td>
+<td>ledsak.AllLeadTest@31ea9581</td></tr>
 <tr>
-<td title='ledsak.RoleSetupTest.createStaff()'><b>createStaff</b><br>Test class: ledsak.RoleSetupTest</td>
+<td title='ledsak.SidebarTest.settings()'><b>settings</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
-<td>24</td>
-<td>ledsak.RoleSetupTest@5965d37</td></tr>
-<tr>
-<td title='ledsak.CustomizepageTest.CheckAttribut()'><b>CheckAttribut</b><br>Test class: ledsak.CustomizepageTest</td>
-<td></td>
-<td>10</td>
-<td>ledsak.CustomizepageTest@7a5ceedd</td></tr>
-<tr>
-<td title='ledsak.SidebarTest.report()'><b>report</b><br>Test class: ledsak.SidebarTest</td>
-<td></td>
-<td>1</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>3</td>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
 <td title='ledsak.DashboardTest.dashboardCard()'><b>dashboardCard</b><br>Test class: ledsak.DashboardTest</td>
 <td></td>
 <td>1</td>
-<td>ledsak.DashboardTest@7d900ecf</td></tr>
+<td>ledsak.DashboardTest@6f53b8a</td></tr>
 <tr>
-<td title='ledsak.CreatestaffTest.createStaff()'><b>createStaff</b><br>Test class: ledsak.CreatestaffTest</td>
+<td title='ledsak.SidebarTest.staffManagement()'><b>staffManagement</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
-<td>10</td>
-<td>ledsak.CreatestaffTest@673fdbce</td></tr>
+<td>6</td>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
-<td title='ledsak.AllLeadTest.dateFilter()'><b>dateFilter</b><br>Test class: ledsak.AllLeadTest</td>
+<td title='ledsak.LeadCreateTest.createLead()'><b>createLead</b><br>Test class: ledsak.LeadCreateTest</td>
 <td></td>
-<td>10</td>
-<td>ledsak.AllLeadTest@7c137fd5</td></tr>
+<td>14</td>
+<td>ledsak.LeadCreateTest@6f01b95f</td></tr>
 <tr>
 <td title='ledsak.SidebarTest.automation()'><b>automation</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
 <td>0</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
-<td title='ledsak.SidebarTest.integrations()'><b>integrations</b><br>Test class: ledsak.SidebarTest</td>
+<td title='ledsak.DashboardTest.overdueTaskCard()'><b>overdueTaskCard</b><br>Test class: ledsak.DashboardTest</td>
 <td></td>
-<td>1</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>5</td>
+<td>ledsak.DashboardTest@6f53b8a</td></tr>
+<tr>
+<td title='ledsak.RoleSetupTest.createStaff()'><b>createStaff</b><br>Test class: ledsak.RoleSetupTest</td>
+<td></td>
+<td>24</td>
+<td>ledsak.RoleSetupTest@1a245833</td></tr>
+<tr>
+<td title='ledsak.AllLeadTest.filterSelect()'><b>filterSelect</b><br>Test class: ledsak.AllLeadTest</td>
+<td></td>
+<td>10</td>
+<td>ledsak.AllLeadTest@31ea9581</td></tr>
 <tr>
 <td title='ledsak.DashboardTest.notification()'><b>notification</b><br>Test class: ledsak.DashboardTest</td>
 <td></td>
 <td>33</td>
-<td>ledsak.DashboardTest@7d900ecf</td></tr>
+<td>ledsak.DashboardTest@6f53b8a</td></tr>
 <tr>
-<td title='ledsak.LeadCreateTest.createLead()'><b>createLead</b><br>Test class: ledsak.LeadCreateTest</td>
+<td title='ledsak.DashboardTest.followUpCard()'><b>followUpCard</b><br>Test class: ledsak.DashboardTest</td>
 <td></td>
-<td>12</td>
-<td>ledsak.LeadCreateTest@1a245833</td></tr>
+<td>3</td>
+<td>ledsak.DashboardTest@6f53b8a</td></tr>
 <tr>
-<td title='ledsak.AllLeadTest.newLead()'><b>newLead</b><br>Test class: ledsak.AllLeadTest</td>
+<td title='ledsak.DatefilterTest.dateFilterCheck()'><b>dateFilterCheck</b><br>Test class: ledsak.DatefilterTest</td>
 <td></td>
-<td>22</td>
-<td>ledsak.AllLeadTest@7c137fd5</td></tr>
+<td>11</td>
+<td>ledsak.DatefilterTest@5965d37</td></tr>
 <tr>
 <td title='ledsak.SidebarTest.opportunities()'><b>opportunities</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
 <td>0</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
-<td title='ledsak.DashboardTest.overdueTaskCard()'><b>overdueTaskCard</b><br>Test class: ledsak.DashboardTest</td>
+<td title='ledsak.CustomizepageTest.CheckAttribut()'><b>CheckAttribut</b><br>Test class: ledsak.CustomizepageTest</td>
 <td></td>
-<td>2</td>
-<td>ledsak.DashboardTest@7d900ecf</td></tr>
-<tr>
-<td title='ledsak.SidebarTest.settings()'><b>settings</b><br>Test class: ledsak.SidebarTest</td>
-<td></td>
-<td>2</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
-<tr>
-<td title='ledsak.DatefilterTest.dateFilterCheck()'><b>dateFilterCheck</b><br>Test class: ledsak.DatefilterTest</td>
-<td></td>
-<td>8</td>
-<td>ledsak.DatefilterTest@4201c465</td></tr>
+<td>12</td>
+<td>ledsak.CustomizepageTest@673fdbce</td></tr>
 <tr>
 <td title='ledsak.SidebarTest.dealManagement()'><b>dealManagement</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
 <td>2</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
-<td title='ledsak.AllLeadTest.filterSelect()'><b>filterSelect</b><br>Test class: ledsak.AllLeadTest</td>
+<td title='ledsak.SidebarTest.leadManagement()'><b>leadManagement</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
-<td>7</td>
-<td>ledsak.AllLeadTest@7c137fd5</td></tr>
+<td>6</td>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
-<td title='ledsak.DashboardTest.followUpCard()'><b>followUpCard</b><br>Test class: ledsak.DashboardTest</td>
+<td title='ledsak.CreatestaffTest.createStaff()'><b>createStaff</b><br>Test class: ledsak.CreatestaffTest</td>
 <td></td>
-<td>1</td>
-<td>ledsak.DashboardTest@7d900ecf</td></tr>
+<td>11</td>
+<td>ledsak.CreatestaffTest@4007f65e</td></tr>
 <tr>
-<td title='ledsak.SidebarTest.staffManagement()'><b>staffManagement</b><br>Test class: ledsak.SidebarTest</td>
+<td title='ledsak.SidebarTest.report()'><b>report</b><br>Test class: ledsak.SidebarTest</td>
 <td></td>
-<td>4</td>
-<td>ledsak.SidebarTest@5c80cf32</td></tr>
+<td>3</td>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
+<tr>
+<td title='ledsak.AllLeadTest.newLead()'><b>newLead</b><br>Test class: ledsak.AllLeadTest</td>
+<td></td>
+<td>23</td>
+<td>ledsak.AllLeadTest@31ea9581</td></tr>
+<tr>
+<td title='ledsak.SidebarTest.integrations()'><b>integrations</b><br>Test class: ledsak.SidebarTest</td>
+<td></td>
+<td>0</td>
+<td>ledsak.SidebarTest@4d1bf319</td></tr>
 <tr>
 <td title='ledsak.DashboardTest.SwithcBranchList()'><b>SwithcBranchList</b><br>Test class: ledsak.DashboardTest</td>
 <td></td>
-<td>4</td>
-<td>ledsak.DashboardTest@7d900ecf</td></tr>
-<tr>
-<td title='ledsak.LeadSetupTest.leadset()'><b>leadset</b><br>Test class: ledsak.LeadSetupTest</td>
-<td></td>
-<td>52</td>
-<td>ledsak.LeadSetupTest@4007f65e</td></tr>
+<td>6</td>
+<td>ledsak.DashboardTest@6f53b8a</td></tr>
 </table><p>
 </body>
 </html>

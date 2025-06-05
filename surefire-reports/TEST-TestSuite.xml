@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="367.993" tests="27" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="412.322" tests="27" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
-    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire2186082348803607460\surefirebooter-20250603122607011_3.jar C:\Users\HP\AppData\Local\Temp\surefire2186082348803607460 2025-06-03T12-26-06_890-jvmRun1 surefire-20250603122607011_1tmp surefire_0-20250603122607011_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire2977683842348998424\surefirebooter-20250604103307614_3.jar C:\Users\HP\AppData\Local\Temp\surefire2977683842348998424 2025-06-04T10-33-07_094-jvmRun1 surefire-20250604103307614_1tmp surefire_0-20250604103307614_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\HP\Desktop\new-Ledsak\led_sak\target\test-classes;C:\Users\HP\Desktop\new-Ledsak\led_sak\target\classes;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-java\4.28.1\selenium-java-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-api\4.28.1\selenium-api-4.28.1.jar;C:\Users\HP\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.28.1\selenium-chrome-driver-4.28.1.jar;C:\Users\HP\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.28.1\selenium-chromium-driver-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-json\4.28.1\selenium-json-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.28.1\selenium-manager-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v130\4.28.1\selenium-devtools-v130-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.28.1\selenium-devtools-v131-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.28.1\selenium-devtools-v132-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.28.1\selenium-devtools-v85-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.28.1\selenium-edge-driver-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.28.1\selenium-firefox-driver-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-http\4.28.1\selenium-http-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.28.1\selenium-ie-driver-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.28.1\selenium-remote-driver-4.28.1.jar;C:\Users\HP\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\HP\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\HP\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\HP\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\HP\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\HP\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\HP\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-api\1.46.0\opentelemetry-api-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-context\1.46.0\opentelemetry-context-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.46.0\opentelemetry-exporter-logging-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.46.0\opentelemetry-sdk-common-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.46.0\opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.46.0\opentelemetry-sdk-extension-autoconfigure-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.46.0-alpha\opentelemetry-api-incubator-1.46.0-alpha.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.46.0\opentelemetry-sdk-trace-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.46.0\opentelemetry-sdk-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.46.0\opentelemetry-sdk-metrics-1.46.0.jar;C:\Users\HP\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.46.0\opentelemetry-sdk-logs-1.46.0.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-os\4.28.1\selenium-os-4.28.1.jar;C:\Users\HP\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.28.1\selenium-safari-driver-4.28.1.jar;C:\Users\HP\.m2\repository\org\seleniumhq\selenium\selenium-support\4.28.1\selenium-support-4.28.1.jar;C:\Users\HP\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\HP\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\HP\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\HP\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\HP\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\HP\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\HP\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\HP\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\HP\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\HP\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\HP\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\HP\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\HP\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\HP\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\HP\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\HP\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\HP\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\HP\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\HP\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\HP\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\HP\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\HP\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\HP\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\HP\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\HP\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\HP\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.1\log4j-core-2.22.1.jar;C:\Users\HP\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.1\log4j-api-2.22.1.jar;C:\Users\HP\.m2\repository\io\qameta\allure\allure-testng\2.24.0\allure-testng-2.24.0.jar;C:\Users\HP\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\HP\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\HP\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire2186082348803607460\surefirebooter-20250603122607011_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire2977683842348998424\surefirebooter-20250604103307614_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.1+11-39"/>
@@ -58,20 +58,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="dateFilter" classname="ledsak.AllLeadTest" time="10.489">
+  <testcase name="dateFilter" classname="ledsak.AllLeadTest" time="14.129">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Jun 03, 2025 12:26:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 04, 2025 10:33:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:26:12 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:33:18 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="filterSelect" classname="ledsak.AllLeadTest" time="7.982">
+  <testcase name="filterSelect" classname="ledsak.AllLeadTest" time="10.796">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 [1, Indiamart, indiamart, , 2, as, as, , 3, API Integration, api_integration, , 4, Facebook, facebook, , 5, Instagram, instagram, , 6, Google, google, , 7, Web Chat, web_chat, ]
@@ -79,26 +79,26 @@ sider open succesfully.
 Facebook found in both lists. Clicking...
 Clicked on Facebook.
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:26:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:33:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:26:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:33:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="newLead" classname="ledsak.AllLeadTest" time="22.551">
+  <testcase name="newLead" classname="ledsak.AllLeadTest" time="23.543">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 lead Created Succesfully
-Actual text in table: Bharath
+Actual text in table: Lead_Name_51
 Element not found, assuming lead is deleted.
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:26:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:34:09 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:26:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:34:09 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="leadManagement" classname="ledsak.SidebarTest" time="4.721">
+  <testcase name="leadManagement" classname="ledsak.SidebarTest" time="6.244">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Lead Management Dropdown open.
@@ -107,70 +107,124 @@ Lead setup page is Interact
 Lead Distribution page is Interact
 Export History page is Interact
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:27:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:34:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:27:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:34:45 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="dealManagement" classname="ledsak.SidebarTest" time="2.127">
+  <testcase name="dealManagement" classname="ledsak.SidebarTest" time="2.826">
     <system-out><![CDATA[Lead Management Dropdown open.
 All Deals page is Interact
 Won Deals page is Interact
 ]]></system-out>
   </testcase>
-  <testcase name="opportunities" classname="ledsak.SidebarTest" time="0.09">
+  <testcase name="opportunities" classname="ledsak.SidebarTest" time="0.076">
     <system-out><![CDATA[Actions Page open: Successfull
 ]]></system-out>
   </testcase>
-  <testcase name="automation" classname="ledsak.SidebarTest" time="0.153">
+  <testcase name="automation" classname="ledsak.SidebarTest" time="0.071">
     <system-out><![CDATA[Automation Page open: Successfull
 ]]></system-out>
   </testcase>
-  <testcase name="integrations" classname="ledsak.SidebarTest" time="1.543">
+  <testcase name="integrations" classname="ledsak.SidebarTest" time="0.954">
     <system-out><![CDATA[Integrations Page open: Successfull
 ]]></system-out>
   </testcase>
-  <testcase name="report" classname="ledsak.SidebarTest" time="1.502">
+  <testcase name="report" classname="ledsak.SidebarTest" time="3.022">
     <system-out><![CDATA[Reports page is Interact
 ]]></system-out>
   </testcase>
-  <testcase name="staffManagement" classname="ledsak.SidebarTest" time="4.264">
+  <testcase name="staffManagement" classname="ledsak.SidebarTest" time="6.45">
     <system-out><![CDATA[Staff page open: Successfull
 Attendance page open: Successfull
 Roles & Permissions page open: Successfull
 Login History page open: Successfull
 ]]></system-out>
   </testcase>
-  <testcase name="settings" classname="ledsak.SidebarTest" time="2.883">
+  <testcase name="settings" classname="ledsak.SidebarTest" time="3.702">
     <system-out><![CDATA[Customize page open: Successfull
 Template page open: Successfull
 ]]></system-out>
   </testcase>
-  <testcase name="notification" classname="ledsak.DashboardTest" time="33.72">
+  <testcase name="notification" classname="ledsak.DashboardTest" time="33.702">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Clicked Notification Button
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:27:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:35:20 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:27:54 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:35:20 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="dashboardCard" classname="ledsak.DashboardTest" time="1.594"/>
-  <testcase name="followUpCard" classname="ledsak.DashboardTest" time="1.883"/>
-  <testcase name="overdueTaskCard" classname="ledsak.DashboardTest" time="2.282"/>
-  <testcase name="SwithcBranchList" classname="ledsak.DashboardTest" time="4.104">
+  <testcase name="dashboardCard" classname="ledsak.DashboardTest" time="1.662"/>
+  <testcase name="followUpCard" classname="ledsak.DashboardTest" time="3.846"/>
+  <testcase name="overdueTaskCard" classname="ledsak.DashboardTest" time="5.057"/>
+  <testcase name="SwithcBranchList" classname="ledsak.DashboardTest" time="6.594">
     <system-out><![CDATA[Both lists match exactly.
 Available Branches:
+Test
 Test
 Test
 Delhi
 kalkaji
 ]]></system-out>
   </testcase>
-  <testcase name="leadset" classname="ledsak.LeadSetupTest" time="52.951">
+  <testcase name="leadset" classname="ledsak.LeadSetupTest" time="35.249">
+    <failure message="stale element reference: stale element not found in the current frame&#10;  (Session info: chrome=137.0.7151.68)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception&#10;Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [4195201095bc6d427286ce0bf43d5281, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.496003F4ADBB3861E93F439C4A3F8C81.d.926EFD6808AD768FEA84B51A9CC753A3.e.1741}], script=arguments[0].click();}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54084/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 4195201095bc6d427286ce0bf43d5281" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found in the current frame
+  (Session info: chrome=137.0.7151.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4195201095bc6d427286ce0bf43d5281, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.496003F4ADBB3861E93F439C4A3F8C81.d.926EFD6808AD768FEA84B51A9CC753A3.e.1741}], script=arguments[0].click();}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54084/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4195201095bc6d427286ce0bf43d5281
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at ledsak.LeadSetupTest.leadset(LeadSetupTest.java:229)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Field created succesfull
@@ -179,44 +233,40 @@ Stage created succesfully
 Stage deleted succesfully
 Source created succesfully
 Source deleted succesfully
-Group created succesfully
-Group deleted succesfully
-Branch created succesfully
-Branch deleted succesfully
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:28:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:36:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:28:49 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:36:23 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="createLead" classname="ledsak.LeadCreateTest" time="12.973">
+  <testcase name="createLead" classname="ledsak.LeadCreateTest" time="14.023">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Staff page open: Successfull
 Staff Created succesfull
 Staff deleted succesfully
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:29:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:37:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:29:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:37:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="createStaff" classname="ledsak.CreatestaffTest" time="10.952">
+  <testcase name="createStaff" classname="ledsak.CreatestaffTest" time="11.806">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Staff page open: Successfull
 Staff created succesfull
 Staff deleted succesfully
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:30:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:37:37 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:30:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:37:37 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="createStaff" classname="ledsak.RoleSetupTest" time="24.339">
+  <testcase name="createStaff" classname="ledsak.RoleSetupTest" time="24.347">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Roles & Permissions page open: Successfull
@@ -224,13 +274,13 @@ Role created succesfull
 [# Role Name Actions, 1 Test, 2 Sales Team, 3 Super Admin]
 Role created delete succesfull
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:30:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:38:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:30:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:38:01 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="CheckAttribut" classname="ledsak.CustomizepageTest" time="10.963">
+  <testcase name="CheckAttribut" classname="ledsak.CustomizepageTest" time="12.049">
     <system-out><![CDATA[Sider is closed try to open...
 Sider opened successfully.
 Customize page open: Successful
@@ -244,76 +294,76 @@ Group label value: Group
 Source label value: Branch
 Stage label value: Stage
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:31:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:38:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:31:12 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:38:38 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="dateFilterCheck" classname="ledsak.DatefilterTest" time="8.593">
+  <testcase name="dateFilterCheck" classname="ledsak.DatefilterTest" time="11.232">
     <system-out><![CDATA[Sider is closed try to open...
 sider open succesfully.
 Custom date select Succesfull
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:31:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:39:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:31:32 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:01 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="headerContent" classname="website.HomeTest" time="0.563">
+  <testcase name="headerContent" classname="website.HomeTest" time="1.933">
     <system-out><![CDATA[content is overlapping checkfalse
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:31:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:39:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:31:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:24 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="title" classname="website.HomeTest" time="2.073">
-    <system-err><![CDATA[Jun 03, 2025 12:31:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="title" classname="website.HomeTest" time="1.81">
+    <system-err><![CDATA[Jun 04, 2025 10:39:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:31:54 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="contactOur" classname="website.HomeTest" time="1.747">
+  <testcase name="contactOur" classname="website.HomeTest" time="5.097">
     <system-out><![CDATA[Contact Button is not clicked.
 Contact Button clicked succesfull and page is appears
 Contact Button clicked succesfull and page is appears
 Contact Button clicked succesfull and page is appears
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:31:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:39:35 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:31:58 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:35 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="priceBanner" classname="website.PricingTest" time="4.5">
+  <testcase name="priceBanner" classname="website.PricingTest" time="4.285">
     <system-out><![CDATA[Are elements overlapping? false
 Ledsak Form Open Succesfull
 true
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:32:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:39:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:32:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="contactUs" classname="website.ContactTest" time="3.752">
+  <testcase name="contactUs" classname="website.ContactTest" time="3.886">
     <system-out><![CDATA[Contact us page appears
-Random 3 characters: gts
+Random 3 characters: MDr
 ✅ Input value set correctly: Test
 ✅ Input value set correctly: test@gmail.com
 ✅ Input value set correctly: ledsak
 ]]></system-out>
-    <system-err><![CDATA[Jun 03, 2025 12:32:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jun 04, 2025 10:39:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:32:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:54 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Jun 03, 2025 12:32:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 04, 2025 10:39:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 137
-Jun 03, 2025 12:32:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Jun 04, 2025 10:39:55 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 137.0.7151.68. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.28.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>

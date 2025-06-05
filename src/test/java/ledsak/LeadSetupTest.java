@@ -28,7 +28,7 @@ public class LeadSetupTest {
     public void setUp() throws IOException, InterruptedException {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+        // options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080"); // Simulate real screen
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
@@ -145,6 +145,7 @@ public class LeadSetupTest {
         Thread.sleep(2000);
         WebElement continueButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue']")));
         js.executeScript("arguments[0].click();", continueButton);
+        Thread.sleep(1000);
         System.out.println("Field deleted succesfull");
 
         //stage create and delete check 
@@ -297,6 +298,7 @@ public class LeadSetupTest {
         Thread.sleep(2000);
         WebElement continueButtonBranch = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Continue']")));
         js.executeScript("arguments[0].click();", continueButtonBranch);
+        driver.navigate().refresh();
         System.out.println("Branch deleted succesfully");
 
     }
