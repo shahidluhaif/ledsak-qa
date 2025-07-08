@@ -3,6 +3,7 @@ package ledsak;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -162,7 +163,7 @@ public class AllLeadTest {
             Assert.assertFalse(actualText.contains(leadName), "Lead was not deleted!");
 
             System.out.println("Element not found, assuming lead is deleted.");
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Filed the login" + e.getMessage());
         }
     }
@@ -201,7 +202,7 @@ public class AllLeadTest {
 
             WebElement allLeadsOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='All Leads']")));
             allLeadsOption.click();
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Eror-" +e.getMessage());
         }
     }
@@ -278,7 +279,7 @@ public class AllLeadTest {
         }
 
              
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             System.out.println("error-"+e.getMessage());
         }
 

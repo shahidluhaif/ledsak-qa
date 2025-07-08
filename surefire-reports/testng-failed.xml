@@ -1,37 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="app(failed)" verbose="0">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="ledsak.AllLeadTest">
+      <class name="ledsak.CustomizepageTest">
         <methods>
-          <include name="dateFilter"/>
-          <include name="tearDown"/>
-          <include name="newLead"/>
+          <include name="CheckAttribut"/>
           <include name="setUp"/>
-          <include name="filterSelect"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- ledsak.AllLeadTest -->
+      </class> <!-- ledsak.CustomizepageTest -->
     </classes>
-  </test> <!-- app(failed) -->
-  <test thread-count="5" name="website(failed)" verbose="0">
-    <classes>
-      <class name="website.PricingTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="priceBanner"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- website.PricingTest -->
-      <class name="website.HomeTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="contactOur"/>
-          <include name="setUp"/>
-          <include name="title"/>
-          <include name="headerContent"/>
-        </methods>
-      </class> <!-- website.HomeTest -->
-    </classes>
-  </test> <!-- website(failed) -->
-</suite> <!-- Failed suite [TestSuite] -->
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

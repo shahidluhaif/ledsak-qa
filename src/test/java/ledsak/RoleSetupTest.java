@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -49,7 +50,7 @@ public class RoleSetupTest {
         WebElement otpBox = wait.until(ExpectedConditions.elementToBeClickable(By.id(":r0:-form-item")));
         otpBox.sendKeys("987654", Keys.ENTER);
         }
-        catch(Exception e){
+        catch(NoSuchElementException e){
             System.out.println("Login is not happened");
         }
         //sider check open or close

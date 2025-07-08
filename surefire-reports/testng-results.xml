@@ -1,273 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-08T13:02:33 IST" name="TestSuite" finished-at="2025-07-08T13:09:17 IST" duration-ms="403902">
+  <suite started-at="2025-07-08T17:19:15 IST" name="Surefire suite" finished-at="2025-07-08T17:19:23 IST" duration-ms="8573">
     <groups>
     </groups>
-    <test started-at="2025-07-08T13:02:33 IST" name="app" finished-at="2025-07-08T13:08:51 IST" duration-ms="377534">
-      <class name="ledsak.SidebarTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:20 IST" name="setup" finished-at="2025-07-08T13:04:30 IST" duration-ms="10151" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="leadManagement()[pri:1, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:30 IST" name="leadManagement" finished-at="2025-07-08T13:04:36 IST" duration-ms="5428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- leadManagement -->
-        <test-method signature="dealManagement()[pri:2, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:36 IST" name="dealManagement" finished-at="2025-07-08T13:04:38 IST" duration-ms="2757" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dealManagement -->
-        <test-method signature="opportunities()[pri:3, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:38 IST" name="opportunities" finished-at="2025-07-08T13:04:38 IST" duration-ms="83" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opportunities -->
-        <test-method signature="automation()[pri:4, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:38 IST" name="automation" finished-at="2025-07-08T13:04:39 IST" duration-ms="125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- automation -->
-        <test-method signature="integrations()[pri:5, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:39 IST" name="integrations" finished-at="2025-07-08T13:04:40 IST" duration-ms="1196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- integrations -->
-        <test-method signature="report()[pri:6, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:40 IST" name="report" finished-at="2025-07-08T13:04:42 IST" duration-ms="2306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- report -->
-        <test-method signature="staffManagement()[pri:7, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:42 IST" name="staffManagement" finished-at="2025-07-08T13:04:47 IST" duration-ms="4783" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- staffManagement -->
-        <test-method signature="settings()[pri:8, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:47 IST" name="settings" finished-at="2025-07-08T13:04:50 IST" duration-ms="3078" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- settings -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.SidebarTest@dd8ba08]" started-at="2025-07-08T13:04:50 IST" name="tearDown" finished-at="2025-07-08T13:04:50 IST" duration-ms="486" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.SidebarTest -->
-      <class name="ledsak.LeadCreateTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.LeadCreateTest@222545dc]" started-at="2025-07-08T13:06:55 IST" name="setUp" finished-at="2025-07-08T13:07:01 IST" duration-ms="6500" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="createLead()[pri:0, instance:ledsak.LeadCreateTest@222545dc]" started-at="2025-07-08T13:07:01 IST" name="createLead" finished-at="2025-07-08T13:07:15 IST" duration-ms="13714" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createLead -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.LeadCreateTest@222545dc]" started-at="2025-07-08T13:07:15 IST" name="tearDown" finished-at="2025-07-08T13:07:15 IST" duration-ms="405" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.LeadCreateTest -->
-      <class name="ledsak.LeadSetupTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.LeadSetupTest@6ae5aa72]" started-at="2025-07-08T13:05:43 IST" name="setUp" finished-at="2025-07-08T13:05:57 IST" duration-ms="14376" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="leadset()[pri:0, instance:ledsak.LeadSetupTest@6ae5aa72]" started-at="2025-07-08T13:05:57 IST" name="leadset" finished-at="2025-07-08T13:06:54 IST" duration-ms="56796" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- leadset -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.LeadSetupTest@6ae5aa72]" started-at="2025-07-08T13:06:54 IST" name="tearDown" finished-at="2025-07-08T13:06:55 IST" duration-ms="521" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.LeadSetupTest -->
-      <class name="ledsak.DatefilterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.DatefilterTest@595b007d]" started-at="2025-07-08T13:08:32 IST" name="setUp" finished-at="2025-07-08T13:08:42 IST" duration-ms="9749" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="dateFilterCheck()[pri:0, instance:ledsak.DatefilterTest@595b007d]" started-at="2025-07-08T13:08:42 IST" name="dateFilterCheck" finished-at="2025-07-08T13:08:50 IST" duration-ms="8023" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dateFilterCheck -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.DatefilterTest@595b007d]" started-at="2025-07-08T13:08:50 IST" name="tearDown" finished-at="2025-07-08T13:08:51 IST" duration-ms="371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.DatefilterTest -->
-      <class name="ledsak.RoleSetupTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.RoleSetupTest@16293aa2]" started-at="2025-07-08T13:07:37 IST" name="setUp" finished-at="2025-07-08T13:07:48 IST" duration-ms="10102" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="createStaff()[pri:0, instance:ledsak.RoleSetupTest@16293aa2]" started-at="2025-07-08T13:07:48 IST" name="createStaff" finished-at="2025-07-08T13:08:16 IST" duration-ms="28329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createStaff -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.RoleSetupTest@16293aa2]" started-at="2025-07-08T13:08:16 IST" name="tearDown" finished-at="2025-07-08T13:08:16 IST" duration-ms="391" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.RoleSetupTest -->
-      <class name="ledsak.DashboardTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:04:50 IST" name="setup" finished-at="2025-07-08T13:05:00 IST" duration-ms="9989" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="notification()[pri:1, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:00 IST" name="notification" finished-at="2025-07-08T13:05:34 IST" duration-ms="33737" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- notification -->
-        <test-method signature="dashboardCard()[pri:2, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:34 IST" name="dashboardCard" finished-at="2025-07-08T13:05:35 IST" duration-ms="803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dashboardCard -->
-        <test-method signature="followUpCard()[pri:2, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:35 IST" name="followUpCard" finished-at="2025-07-08T13:05:36 IST" duration-ms="1449" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- followUpCard -->
-        <test-method signature="overdueTaskCard()[pri:4, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:36 IST" name="overdueTaskCard" finished-at="2025-07-08T13:05:38 IST" duration-ms="1172" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- overdueTaskCard -->
-        <test-method signature="SwithcBranchList()[pri:5, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:38 IST" name="SwithcBranchList" finished-at="2025-07-08T13:05:43 IST" duration-ms="4945" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SwithcBranchList -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.DashboardTest@245b4bdc]" started-at="2025-07-08T13:05:43 IST" name="tearDown" finished-at="2025-07-08T13:05:43 IST" duration-ms="467" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.DashboardTest -->
+    <test started-at="2025-07-08T17:19:15 IST" name="Surefire test" finished-at="2025-07-08T17:19:23 IST" duration-ms="8573">
       <class name="ledsak.CustomizepageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.CustomizepageTest@5158b42f]" started-at="2025-07-08T13:08:16 IST" name="setUp" finished-at="2025-07-08T13:08:20 IST" duration-ms="4125" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.CustomizepageTest@61dd025]" started-at="2025-07-08T17:19:15 IST" name="setUp" finished-at="2025-07-08T17:19:21 IST" duration-ms="6543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CheckAttribut()[pri:0, instance:ledsak.CustomizepageTest@5158b42f]" started-at="2025-07-08T13:08:20 IST" name="CheckAttribut" finished-at="2025-07-08T13:08:32 IST" duration-ms="11577" status="PASS">
+        <test-method signature="CheckAttribut()[pri:0, instance:ledsak.CustomizepageTest@61dd025]" started-at="2025-07-08T17:19:21 IST" name="CheckAttribut" finished-at="2025-07-08T17:19:23 IST" duration-ms="1591" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.callField" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.callField" is null
+at ledsak.CustomizeBase.callTextBox(CustomizeBase.java:58)
+at ledsak.CustomizepageTest.CheckAttribut(CustomizepageTest.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckAttribut -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.CustomizepageTest@5158b42f]" started-at="2025-07-08T13:08:32 IST" name="tearDown" finished-at="2025-07-08T13:08:32 IST" duration-ms="403" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.CustomizepageTest@61dd025]" started-at="2025-07-08T17:19:23 IST" name="tearDown" finished-at="2025-07-08T17:19:23 IST" duration-ms="381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- ledsak.CustomizepageTest -->
-      <class name="ledsak.CreatestaffTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.CreatestaffTest@5c5eefef]" started-at="2025-07-08T13:07:15 IST" name="setUp" finished-at="2025-07-08T13:07:26 IST" duration-ms="10250" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="createStaff()[pri:0, instance:ledsak.CreatestaffTest@5c5eefef]" started-at="2025-07-08T13:07:26 IST" name="createStaff" finished-at="2025-07-08T13:07:37 IST" duration-ms="11451" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createStaff -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.CreatestaffTest@5c5eefef]" started-at="2025-07-08T13:07:37 IST" name="tearDown" finished-at="2025-07-08T13:07:37 IST" duration-ms="424" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.CreatestaffTest -->
-      <class name="ledsak.AllLeadTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:02:33 IST" name="setUp" finished-at="2025-07-08T13:02:47 IST" duration-ms="14309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="dateFilter()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:02:47 IST" name="dateFilter" finished-at="2025-07-08T13:02:58 IST" duration-ms="10208" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dateFilter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:02:58 IST" name="tearDown" finished-at="2025-07-08T13:02:58 IST" duration-ms="504" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:02:58 IST" name="setUp" finished-at="2025-07-08T13:03:08 IST" duration-ms="9679" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="filterSelect()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:03:08 IST" name="filterSelect" finished-at="2025-07-08T13:03:17 IST" duration-ms="9572" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filterSelect -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:03:17 IST" name="tearDown" finished-at="2025-07-08T13:03:18 IST" duration-ms="428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:03:18 IST" name="setUp" finished-at="2025-07-08T13:03:28 IST" duration-ms="9675" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="newLead()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:03:28 IST" name="newLead" finished-at="2025-07-08T13:04:20 IST" duration-ms="52178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newLead -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ledsak.AllLeadTest@6e171cd7]" started-at="2025-07-08T13:04:20 IST" name="tearDown" finished-at="2025-07-08T13:04:20 IST" duration-ms="391" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ledsak.AllLeadTest -->
-    </test> <!-- app -->
-    <test started-at="2025-07-08T13:08:51 IST" name="website" finished-at="2025-07-08T13:09:17 IST" duration-ms="26321">
-      <class name="website.HomeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:51 IST" name="setUp" finished-at="2025-07-08T13:08:52 IST" duration-ms="1724" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="headerContent()[pri:1, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:52 IST" name="headerContent" finished-at="2025-07-08T13:08:53 IST" duration-ms="795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- headerContent -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:53 IST" name="tearDown" finished-at="2025-07-08T13:08:53 IST" duration-ms="341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:53 IST" name="setUp" finished-at="2025-07-08T13:08:55 IST" duration-ms="1682" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="title()[pri:2, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:55 IST" name="title" finished-at="2025-07-08T13:08:57 IST" duration-ms="2128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- title -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:57 IST" name="tearDown" finished-at="2025-07-08T13:08:58 IST" duration-ms="464" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:58 IST" name="setUp" finished-at="2025-07-08T13:08:59 IST" duration-ms="1675" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="contactOur()[pri:3, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:08:59 IST" name="contactOur" finished-at="2025-07-08T13:09:02 IST" duration-ms="2514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contactOur -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:website.HomeTest@351d00c0]" started-at="2025-07-08T13:09:02 IST" name="tearDown" finished-at="2025-07-08T13:09:03 IST" duration-ms="576" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- website.HomeTest -->
-      <class name="website.PricingTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:website.PricingTest@2a3b5b47]" started-at="2025-07-08T13:09:03 IST" name="setUp" finished-at="2025-07-08T13:09:04 IST" duration-ms="1751" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="priceBanner()[pri:0, instance:website.PricingTest@2a3b5b47]" started-at="2025-07-08T13:09:04 IST" name="priceBanner" finished-at="2025-07-08T13:09:09 IST" duration-ms="4744" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- priceBanner -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:website.PricingTest@2a3b5b47]" started-at="2025-07-08T13:09:09 IST" name="tearDown" finished-at="2025-07-08T13:09:09 IST" duration-ms="421" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- website.PricingTest -->
-      <class name="website.ContactTest">
-        <test-method is-config="true" signature="LaunchURL()[pri:0, instance:website.ContactTest@55b699ef]" started-at="2025-07-08T13:09:09 IST" name="LaunchURL" finished-at="2025-07-08T13:09:12 IST" duration-ms="2533" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchURL -->
-        <test-method signature="contactUs()[pri:0, instance:website.ContactTest@55b699ef]" started-at="2025-07-08T13:09:12 IST" name="contactUs" finished-at="2025-07-08T13:09:16 IST" duration-ms="4268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contactUs -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:website.ContactTest@55b699ef]" started-at="2025-07-08T13:09:16 IST" name="tearDown" finished-at="2025-07-08T13:09:17 IST" duration-ms="701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- website.ContactTest -->
-    </test> <!-- website -->
-  </suite> <!-- TestSuite -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>

@@ -95,7 +95,7 @@ public class ContactTest {
         nameBox.sendKeys(namevalue);
 
         // Validate the input's value
-        String actualValue1 = nameBox.getAttribute("value");
+        String actualValue1 = nameBox.getDomAttribute("value");
 
         // Assertion / Validation
         if (namevalue.equals(actualValue1)) {
@@ -112,7 +112,7 @@ public class ContactTest {
         emailBox.sendKeys(emailValue2);
 
         // Validate the input's value
-        String actualValue2 = emailBox.getAttribute("value");
+        String actualValue2 = emailBox.getDomAttribute("value");
 
         // Assertion / Validation
         if (emailValue2.equals(actualValue2)) {
@@ -129,7 +129,7 @@ public class ContactTest {
         companyBox.sendKeys(expectedValue);
 
         // Validate the input's value
-        String actualValue = companyBox.getAttribute("value");
+        String actualValue = companyBox.getDomAttribute("value");
 
         // Assertion / Validation
         if (expectedValue.equals(actualValue)) {

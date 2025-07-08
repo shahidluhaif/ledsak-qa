@@ -62,7 +62,7 @@ public class CustomizeBase {
         callField.sendKeys(Keys.DELETE);
         Thread.sleep(300);
         callField.sendKeys("Call");
-        System.out.println("call value: " + callField.getAttribute("value"));
+        System.out.println("call value: " + callField.getDomAttribute("value"));
     }
 
     public void emailTextBox() throws InterruptedException {
@@ -72,7 +72,7 @@ public class CustomizeBase {
         emailField.sendKeys(Keys.DELETE);
         Thread.sleep(300);
         emailField.sendKeys("Email");
-        System.out.println("email value: " + emailField.getAttribute("value"));
+        System.out.println("email value: " + emailField.getDomAttribute("value"));
 
     }
 
@@ -83,7 +83,7 @@ public class CustomizeBase {
         meetingField.sendKeys(Keys.DELETE);
         Thread.sleep(300);
         meetingField.sendKeys("Meeting");
-        System.out.println("meeting value: " + meetingField.getAttribute("value"));
+        System.out.println("meeting value: " + meetingField.getDomAttribute("value"));
 
     }
 
@@ -95,7 +95,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         taskField.sendKeys("Task");
 
-        System.out.println("task value: " + taskField.getAttribute("value"));
+        System.out.println("task value: " + taskField.getDomAttribute("value"));
 
     }
 
@@ -107,7 +107,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         branchField.sendKeys("Branch");
 
-        System.out.println("Branch label value: " + branchField.getAttribute("value"));
+        System.out.println("Branch label value: " + branchField.getDomAttribute("value"));
     }
 
     public void leadFieldTextBox() throws InterruptedException {
@@ -118,7 +118,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         leadfieldField.sendKeys("Lead Field");
 
-        System.out.println("Lead Field label value: " + leadfieldField.getAttribute("value"));
+        System.out.println("Lead Field label value: " + leadfieldField.getDomAttribute("value"));
     }
 
     public void groupFieldTextBox() throws InterruptedException {
@@ -129,7 +129,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         groupField.sendKeys("Group");
 
-        System.out.println("Group label value: " + groupField.getAttribute("value"));
+        System.out.println("Group label value: " + groupField.getDomAttribute("value"));
     }
 
     public void sourceFieldTextBox() throws InterruptedException {
@@ -140,7 +140,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         sourceField.sendKeys("Branch");
 
-        System.out.println("Source label value: " + sourceField.getAttribute("value"));
+        System.out.println("Source label value: " + sourceField.getDomAttribute("value"));
     }
 
     public void StageieldTextBox() throws InterruptedException {
@@ -151,7 +151,7 @@ public class CustomizeBase {
         Thread.sleep(300);
         stageField.sendKeys("Stage");
 
-        System.out.println("Stage label value: " + stageField.getAttribute("value"));
+        System.out.println("Stage label value: " + stageField.getDomAttribute("value"));
     }
 
     public void updateButton() {

@@ -3,6 +3,7 @@ package ledsak;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -49,7 +50,7 @@ public class LeadCreateTest {
 
             WebElement otpBox = wait.until(ExpectedConditions.elementToBeClickable(By.id(":r0:-form-item")));
             otpBox.sendKeys("987654", Keys.ENTER);
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Try to login: But not login");
         }
 
@@ -153,7 +154,7 @@ public class LeadCreateTest {
             js.executeScript("arguments[0].click();", deleteButtonStaff);
             System.out.println("Staff deleted succesfully");
 
-        } catch (Exception e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Failed");
         }
     }

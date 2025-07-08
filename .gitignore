@@ -36,3 +36,5 @@ test-output/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+surefire-reports/
