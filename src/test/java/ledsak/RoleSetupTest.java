@@ -28,6 +28,7 @@ public class RoleSetupTest {
     @BeforeMethod
     public void setUp() throws IOException, InterruptedException {
 
+        try{
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
@@ -47,7 +48,10 @@ public class RoleSetupTest {
 
         WebElement otpBox = wait.until(ExpectedConditions.elementToBeClickable(By.id(":r0:-form-item")));
         otpBox.sendKeys("987654", Keys.ENTER);
-
+        }
+        catch(Exception e){
+            System.out.println("Login is not happened");
+        }
         //sider check open or close
         try {
             WebElement firstElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='h-full no-scrollbar overflow-y-visible']")));

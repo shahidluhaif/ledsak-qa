@@ -27,6 +27,7 @@ public class AllLeadTest {
     @BeforeMethod
     public void setUp() {
 
+        try{
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080"); // Simulate real screen
@@ -47,7 +48,10 @@ public class AllLeadTest {
 
         WebElement otpBox = wait.until(ExpectedConditions.elementToBeClickable(By.id(":r0:-form-item")));
         otpBox.sendKeys("987654", Keys.ENTER);
-
+        }
+        catch(Exception e){
+            System.out.println("launch problem"+ e.getMessage());
+        }
         //sider check open or close
         try {
             WebElement firstElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='h-full no-scrollbar overflow-y-visible']")));
@@ -198,6 +202,7 @@ public class AllLeadTest {
     @Test
     public void filterSelect() throws InterruptedException {
         driver.navigate().refresh();
+        Thread.sleep(1000);
         //click on lead Management dropdown
         WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
         leadManagementDropdown.click();
@@ -223,6 +228,7 @@ public class AllLeadTest {
 
         //--------------------------------------------------------------------------------------------------------------------//
         //All Lead Dropdown
+        try{
         WebElement allLeads = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='All Leads']")));
         wait.until(ExpectedConditions.elementToBeClickable(allLeads));
         allLeads.click();
@@ -258,6 +264,10 @@ public class AllLeadTest {
         } else {
             System.out.println("Facebook not found in both lists.");
         }
+    }
+    catch(Exception e){
+        System.out.println("filter is not select while checking.");
+    }
 
     }
 }

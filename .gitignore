@@ -1,6 +1,6 @@
 # Maven
-surefire-reports
-allure-results
+allure-results/
+allure-report/
 target
 pom.xml.tag
 pom.xml.releaseBackup

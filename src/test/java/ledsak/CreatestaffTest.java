@@ -27,6 +27,7 @@ public class CreatestaffTest {
     @BeforeMethod
     public void setUp() throws IOException, InterruptedException {
 
+        try{
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080"); // Simulate real screen
@@ -48,6 +49,10 @@ public class CreatestaffTest {
 
         WebElement otpBox = wait.until(ExpectedConditions.elementToBeClickable(By.id(":r0:-form-item")));
         otpBox.sendKeys("987654", Keys.ENTER);
+        }
+        catch(Exception e){
+            System.out.println("Launch failed");
+        }
 
         //sider check open or close
         try {

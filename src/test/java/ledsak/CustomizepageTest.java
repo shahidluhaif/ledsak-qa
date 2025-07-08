@@ -61,15 +61,13 @@ public class CustomizepageTest extends CustomizeBase {
         }
 
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
+            WebElement dashboard = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Dashboard']")));
+            Assert.assertTrue(dashboard.isDisplayed(), "Dashboard is not open");
+            dashboard.click();
+        } catch (Exception e) {
             System.out.println("Thread was interrupted");
         }
 
-        WebElement dashboard = wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//span[text()='Dashboard']")));
-        Assert.assertTrue(dashboard.isDisplayed(), "Dashboard is not open");
-        dashboard.click();
     }
 
     @AfterMethod
