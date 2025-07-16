@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="ledsak.CustomizepageTest">
+      <class name="ledsak.AllLeadTest">
         <methods>
-          <include name="CheckAttribut"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="newLead"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- ledsak.CustomizepageTest -->
+      </class> <!-- ledsak.AllLeadTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

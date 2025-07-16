@@ -5,33 +5,11 @@
     <classes>
       <class name="ledsak.AllLeadTest">
         <methods>
-          <include name="dateFilter"/>
           <include name="tearDown"/>
           <include name="newLead"/>
           <include name="setUp"/>
-          <include name="filterSelect"/>
         </methods>
       </class> <!-- ledsak.AllLeadTest -->
     </classes>
   </test> <!-- app(failed) -->
-  <test thread-count="5" name="website(failed)" verbose="0">
-    <classes>
-      <class name="website.PricingTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="priceBanner"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- website.PricingTest -->
-      <class name="website.HomeTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="contactOur"/>
-          <include name="setUp"/>
-          <include name="title"/>
-          <include name="headerContent"/>
-        </methods>
-      </class> <!-- website.HomeTest -->
-    </classes>
-  </test> <!-- website(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

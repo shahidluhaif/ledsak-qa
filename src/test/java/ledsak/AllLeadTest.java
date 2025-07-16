@@ -89,8 +89,8 @@ public class AllLeadTest {
         }
     }
 
-    //Lead Create manually check
-    @Test
+    //Lead Create manually check- by automation
+    @Test (priority= 1)
     public void newLead() throws InterruptedException {
         try {
             driver.navigate().refresh();
@@ -109,12 +109,13 @@ public class AllLeadTest {
             WebElement allLeadsRefresh = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='All Leads']")));
             Assert.assertTrue(allLeadsRefresh.isDisplayed(), "All Leads page is not visible");
 
-            WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Create']")));
+            WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Create')]")));
             createButton.click();
 
-            WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Name']/../child::input")));
-            WebElement phoneBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[text()='Phone']/../child::input")));
-            WebElement branchBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@role=\"combobox\"])[9]")));
+            try{
+            WebElement nameBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='lead_details.0.lead_field_value']")));
+            WebElement phoneBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='lead_details.2.lead_field_value']")));
+            WebElement branchBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@role='combobox'])[9]")));
             WebElement createButton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Create'])[2]")));
 
             String leadName = "Test Lead";
@@ -131,7 +132,8 @@ public class AllLeadTest {
             Thread.sleep(1000);
             actions.moveToElement(createButton2);
             createButton2.click();
-            actions.moveToLocation(650, 200).click().perform();
+            Thread.sleep(1000);
+            
 
             Thread.sleep(3000);
             // Verify lead creation
@@ -161,6 +163,9 @@ public class AllLeadTest {
 
             System.out.println("Actual text in table: " + actualText);
             Assert.assertFalse(actualText.contains(leadName), "Lead was not deleted!");
+            }catch(InterruptedException e){
+                System.out.println(e.getMessage());
+            }
 
             System.out.println("Element not found, assuming lead is deleted.");
         } catch (NoSuchElementException e) {
@@ -169,7 +174,7 @@ public class AllLeadTest {
     }
 
     //Date Filter 
-    @Test
+    @Test(priority=2)
     public void dateFilter() throws InterruptedException {
 
         try {
@@ -208,7 +213,7 @@ public class AllLeadTest {
     }
 
     //filter select 
-    @Test
+    @Test (priority= 3)
     public void filterSelect() throws InterruptedException {
         try {
         driver.navigate().refresh();

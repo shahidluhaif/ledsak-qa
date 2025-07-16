@@ -84,6 +84,7 @@ public class DashboardTest extends LoginTest {
     @Test(priority = 5)
     public void SwithcBranchList() throws InterruptedException {
 
+        try{
         //click on lead Management dropdown
         WebElement leadManagementDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Leads Management']")));
         leadManagementDropdown.click();
@@ -138,6 +139,10 @@ public class DashboardTest extends LoginTest {
         for (String branch : switchBranchList) {
             System.out.println(branch);
         }
+    }
+    catch(InterruptedException e){
+        System.out.println(e.getMessage());
+    }
     }
 
 }
